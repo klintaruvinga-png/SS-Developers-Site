@@ -1,0 +1,25 @@
+---
+// Diagram component to embed SVG assets from the public folder
+// Usage: <Diagram src="/images/diagram-system/superfib.svg" alt="SuperFIB Diagram" />
+export interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+}
+---
+<div class={"diagram " + (props.class ?? "")}>
+  <img src={props.src} alt={props.alt ?? "Diagram"} loading="lazy" />
+</div>
+
+<style>
+  .diagram {
+    max-width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .diagram img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--ink, #111);
+  }
+</style>
