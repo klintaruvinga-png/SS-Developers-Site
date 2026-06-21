@@ -126,22 +126,26 @@ Nav at launch excludes Engineering Notes entirely (not grayed out, not "coming s
 - **Mechanism (recommended, not yet confirmed by Kudzie):** Given the locked tech-stack decision (Astro, static-generated, no backend), a static-form-handling service (e.g. Formspree, Netlify Forms, or equivalent) posting to email is the natural fit — it keeps the site fully static and avoids standing up a serverless function for something this low-volume. **Flag for Kudzie's confirmation before build**, since the form mechanism specifically wasn't locked in scoping.
 
 #### 4.7.1 Privacy Notice & User Consent
+
 - Form must display a brief, clear privacy notice above the submit button stating that submitted data (name, email, project type, timeline, message) will be collected and used to evaluate fit and respond to inbound enquiries.
-- No separate consent checkbox required if the notice is present — disclosure above a submit button constitutes informed consent in this low-risk context (contact inquiry only, no newsletter signup or tracking).
+- No separate consent checkbox required if the notice is present — disclosure above a submit button constitutes informed consent in this low-risk context (contact enquiry only, no newsletter signup or tracking).
 - Notice wording example: "Submitting this form sends your information to Kudzie's email. Data is used only to respond to your enquiry and will not be shared, sold, or used for marketing."
 
 #### 4.7.2 Data Retention Policy
+
 - Submissions are retained in Kudzie's email inbox and any associated static-form-service logs (if applicable to the service chosen in 8.3) for a maximum of 90 days.
 - Automatic deletion: submissions are automatically purged from both the email inbox and form service logs after 90 days.
 - Clarify with the chosen form service (Formspree, Netlify Forms, etc.) whether it supports automatic 90-day retention limits, or if manual purging will be required to enforce this policy on the service side.
 
 #### 4.7.3 Data Deletion Process
+
 - All submissions are automatically deleted after 90 days from both the email inbox and form service logs.
 - Users may request early deletion of their submission by sending a follow-up email to Kudzie with a deletion request (email address to be provided in Contact page footer or in auto-reply if one is configured).
 - Early deletion requests mean Kudzie removes the submission from their email and requests the form service to remove logs if supported — this is a manual process for early deletions only.
 - Specify a reasonable turnaround time for early deletion requests (e.g., "deletions processed within 7 business days") in the Contact page footer.
 
 #### 4.7.4 Spam-Handling Approach
+
 - Form does not include CAPTCHA or proof-of-work mechanisms at launch — trust baseline assumes low-volume personal-site spam risk.
 - If spam becomes a problem post-launch, add lightweight client-side honeypot field (invisible to humans, caught by bots) or CAPTCHA via the form service's settings.
 - Form service choice (8.3) should support spam filtering or rate-limiting as a built-in feature — confirm before selecting the service.
