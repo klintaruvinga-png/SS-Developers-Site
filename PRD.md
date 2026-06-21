@@ -101,7 +101,7 @@ Nav at launch excludes Engineering Notes entirely (not grayed out, not "coming s
 ### 4.4 Architecture
 **Purpose:** A dedicated page for the cross-system diagram(s), pulled out of the SuperFIB case study as its own visual section.
 
-- **Confirmed structure:** pure flow diagram — boxes and arrows, Pine → PHP → MT5 → React, clearly labeled. No annotation callouts, no layered/stacked metaphor, no isometric treatment. One clean, legible flow.
+- **Confirmed structure:** pure hub‑and‑spoke flow diagram — PHP/WordPress REST API as the central hub, with Pine Script Indicator, MT5 Expert Advisors, and React Dashboard as spokes. Boxes and arrows clearly label each system. No annotation callouts, no layered/stacked metaphor, no isometric treatment. One clean, legible flow.
 - Short topology narrative alongside the diagram (a few sentences, not a wall of text) explaining what the diagram shows and why backend authority matters.
 - Same Proprietary Information Check applies (Section 7) — this page is the highest-risk surface for accidental logic leakage since it's the most detailed diagram on the site.
 
@@ -124,6 +124,27 @@ Nav at launch excludes Engineering Notes entirely (not grayed out, not "coming s
 
 - **Confirmed:** a form with qualifying fields, not a bare mailto link — name/email, project type, timeline, message. Fields are short and optional beyond the basics, designed to pre-filter inbound given "broad, any client" is the current target-audience answer (a filterless form risks unqualified leads consuming time).
 - **Mechanism (recommended, not yet confirmed by Kudzie):** Given the locked tech-stack decision (Astro, static-generated, no backend), a static-form-handling service (e.g. Formspree, Netlify Forms, or equivalent) posting to email is the natural fit — it keeps the site fully static and avoids standing up a serverless function for something this low-volume. **Flag for Kudzie's confirmation before build**, since the form mechanism specifically wasn't locked in scoping.
+
+#### 4.7.1 Privacy Notice & User Consent
+- Form must display a brief, clear privacy notice above the submit button stating that submitted data (name, email, project type, timeline, message) will be collected and used to evaluate fit and respond to inbound enquiries.
+- No separate consent checkbox required if the notice is present — disclosure above a submit button constitutes informed consent in this low-risk context (contact inquiry only, no newsletter signup or tracking).
+- Notice wording example: "Submitting this form sends your information to Kudzie's email. Data is used only to respond to your enquiry and will not be shared, sold, or used for marketing."
+
+#### 4.7.2 Data Retention Policy
+- Submissions are retained in Kudzie's email inbox and any associated static-form-service logs (if applicable to the service chosen in 8.3).
+- No automatic deletion: submissions are retained indefinitely as part of normal email/inbox management, unless Kudzie manually deletes them.
+- Clarify with the chosen form service (Formspree, Netlify Forms, etc.) what its default retention is, and whether logs are ever purged server-side (most static-form services retain submission logs for at least 30 days, many longer).
+
+#### 4.7.3 Data Deletion Process
+- Users may request deletion of their submission by sending a follow-up email to Kudzie with a deletion request (email address to be provided in Contact page footer or in auto-reply if one is configured).
+- Deletion means Kudzie removes the submission from their email and requests the form service to remove logs if supported — this is a manual process, not automated.
+- Specify a reasonable turnaround time (e.g., "deletions processed within 7 business days") in the Contact page footer.
+
+#### 4.7.4 Spam-Handling Approach
+- Form does not include CAPTCHA or proof-of-work mechanisms at launch — trust baseline assumes low-volume personal-site spam risk.
+- If spam becomes a problem post-launch, add lightweight client-side honeypot field (invisible to humans, caught by bots) or CAPTCHA via the form service's settings.
+- Form service choice (8.3) should support spam filtering or rate-limiting as a built-in feature — confirm before selecting the service.
+- Submissions flagged as spam by the form service will be quarantined; unsubstantiated spam is deleted without response.
 
 ### 4.8 Now
 **Purpose:** Lightweight, high-signal, low-maintenance-cost proof of current activity.
@@ -234,7 +255,8 @@ Reasoning:
 ### 8.3 Contact form mechanism (recommended, pending confirmation)
 - Static form service (Formspree, Netlify Forms, or equivalent) posting to Kudzie's email. No custom backend, consistent with the static-site architecture.
 - Fields: name, email, project type (select/short list), timeline (select/short list), message (free text).
-- **This was not explicitly confirmed in scoping beyond "form with qualifying fields" — confirm specific service before Phase 3 build.**
+- **Service selection criteria:** chosen service must support spam filtering or rate-limiting (per 4.7.4), provide clear submission log retention terms (per 4.7.2), and allow manual log deletion on request (per 4.7.3). Confirm these capabilities with the service before Phase 3 build.
+- **This was not explicitly confirmed in scoping beyond "form with qualifying fields" — confirm specific service and its data-handling terms before Phase 3 build.**
 
 ### 8.4 SEO & Accessibility (from `phased-plan.md` Phase 2 / Phase 5)
 - SEO metadata defaults per page (title, description, OG tags) set during Phase 2 scaffold, not bolted on later.
