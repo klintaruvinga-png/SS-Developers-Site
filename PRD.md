@@ -131,14 +131,15 @@ Nav at launch excludes Engineering Notes entirely (not grayed out, not "coming s
 - Notice wording example: "Submitting this form sends your information to Kudzie's email. Data is used only to respond to your enquiry and will not be shared, sold, or used for marketing."
 
 #### 4.7.2 Data Retention Policy
-- Submissions are retained in Kudzie's email inbox and any associated static-form-service logs (if applicable to the service chosen in 8.3).
-- No automatic deletion: submissions are retained indefinitely as part of normal email/inbox management, unless Kudzie manually deletes them.
-- Clarify with the chosen form service (Formspree, Netlify Forms, etc.) what its default retention is, and whether logs are ever purged server-side (most static-form services retain submission logs for at least 30 days, many longer).
+- Submissions are retained in Kudzie's email inbox and any associated static-form-service logs (if applicable to the service chosen in 8.3) for a maximum of 90 days.
+- Automatic deletion: submissions are automatically purged from both the email inbox and form service logs after 90 days.
+- Clarify with the chosen form service (Formspree, Netlify Forms, etc.) whether it supports automatic 90-day retention limits, or if manual purging will be required to enforce this policy on the service side.
 
 #### 4.7.3 Data Deletion Process
-- Users may request deletion of their submission by sending a follow-up email to Kudzie with a deletion request (email address to be provided in Contact page footer or in auto-reply if one is configured).
-- Deletion means Kudzie removes the submission from their email and requests the form service to remove logs if supported — this is a manual process, not automated.
-- Specify a reasonable turnaround time (e.g., "deletions processed within 7 business days") in the Contact page footer.
+- All submissions are automatically deleted after 90 days from both the email inbox and form service logs.
+- Users may request early deletion of their submission by sending a follow-up email to Kudzie with a deletion request (email address to be provided in Contact page footer or in auto-reply if one is configured).
+- Early deletion requests mean Kudzie removes the submission from their email and requests the form service to remove logs if supported — this is a manual process for early deletions only.
+- Specify a reasonable turnaround time for early deletion requests (e.g., "deletions processed within 7 business days") in the Contact page footer.
 
 #### 4.7.4 Spam-Handling Approach
 - Form does not include CAPTCHA or proof-of-work mechanisms at launch — trust baseline assumes low-volume personal-site spam risk.
