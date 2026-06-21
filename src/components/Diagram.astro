@@ -6,9 +6,11 @@ export interface Props {
   alt?: string;
   class?: string;
 }
+
+const { src, alt, class: className } = Astro.props;
 ---
-<div class={"diagram " + (props.class ?? "")}>
-  <img src={props.src} alt={props.alt ?? "Diagram"} loading="lazy" />
+<div class={"diagram " + (className ?? "")}>
+  <img src={src} alt={alt ?? "Diagram"} loading="lazy" />
 </div>
 
 <style>

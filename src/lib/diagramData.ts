@@ -118,6 +118,17 @@ export const stokvelTopology: StokvelTopology = {
   ledgerToPayout: { from: 'node-ledger', to: 'node-payout' },
 };
 
+/** Escape special XML/SVG characters to prevent injection vulnerabilities */
+function escapeSvg(value: string | number): string {
+  const str = String(value);
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 /** Utility to generate a simple SVG node element */
 export function createFlowNode(
   id: string,
@@ -133,12 +144,12 @@ export function createFlowNode(
     ...style,
   };
   return `
-<g id="${id}" class="flow-node">
-  <rect x="${x}" y="${y}" width="120" height="40" rx="2" ry="2"
-        stroke="${s.stroke}" stroke-width="${s.strokeWidth}" fill="${s.fill}" />
-  <text x="${x + 60}" y="${y + 25}" text-anchor="middle"
-        font-family="monospace" font-size="12" fill="${designTokens.colors.diagram.text}">
-    ${label}
+<g id="${escapeSvg(id)}" class="flow-node">
+  <rect x="${escapeSvg(x)}" y="${escapeSvg(y)}" width="120" height="40" rx="2" ry="2"
+        stroke="${escapeSvg(s.stroke)}" stroke-width="${escapeSvg(s.strokeWidth)}" fill="${escapeSvg(s.fill)}" />
+  <text x="${escapeSvg(x + 60)}" y="${escapeSvg(y + 25)}" text-anchor="middle"
+        font-family="monospace" font-size="12" fill="${escapeSvg(designTokens.colors.diagram.text)}">
+    ${escapeSvg(label)}
   </text>
 </g>`;
 }
@@ -157,7 +168,7 @@ export function createFlowArrow(
   const angle = Math.atan2(toY - fromY, toX - fromX) * (180 / Math.PI);
   return `
 <g class="flow-arrow">
-  <path d="M ${fromX} ${fromY} L ${toX} ${toY}" stroke="${s.stroke}" stroke-width="${s.strokeWidth}" fill="none" />
-  <polygon points="0,0 8,4 0,8" transform="translate(${toX}, ${toY}) rotate(${angle})" stroke="${s.stroke}" fill="${s.stroke}" />
+  <path d="M ${escapeSvg(fromX)} ${escapeSvg(fromY)} L ${escapeSvg(toX)} ${escapeSvg(toY)}" stroke="${escapeSvg(s.stroke)}" stroke-width="${escapeSvg(s.strokeWidth)}" fill="none" />
+  <polygon points="0,0 8,4 0,8" transform="translate(${escapeSvg(toX)}, ${escapeSvg(toY)}) rotate(${escapeSvg(angle)})" stroke="${escapeSvg(s.stroke)}" fill="${escapeSvg(s.stroke)}" />
 </g>`;
 }
