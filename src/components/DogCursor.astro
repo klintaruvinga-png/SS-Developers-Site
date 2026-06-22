@@ -1,0 +1,35 @@
+---
+// Hand‑drawn dog that follows the cursor and sits when the mouse stops.
+---
+<div id="dog-cursor" class="fixed inset-0 pointer-events-none z-50 opacity-90 hidden">
+  <img src="/assets/dog.svg" alt="Hand‑drawn dog" class="w-20 h-20" />
+</div>
+
+<script>
+  const dog = document.getElementById('dog-cursor');
+  if (dog) {
+    dog.classList.remove('hidden');
+    let timeoutId = null;
+    const idleDelay = 300; // ms without movement → sit
+    const setPosition = (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      dog.style.transform = `translate(${x - 40}px, ${y - 40}px)`; // centre the 80px image
+      dog.classList.remove('sitting');
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        dog.classList.add('sitting');
+      }, idleDelay);
+    };
+    window.addEventListener('mousemove', setPosition);
+  }
+</script>
+
+<style>
+  #dog-cursor img {
+    transition: transform 0.2s ease-out;
+  }
+  #dog-cursor.sitting img {
+    transform: translateY(10px) rotate(10deg);
+  }
+</style>
