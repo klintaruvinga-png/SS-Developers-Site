@@ -1,0 +1,18 @@
+/* Global CSS variables and Tailwind imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #222222; /* near‑black */
+  --paper: #ffffff; /* off‑white */
+  --gray-mid: #777777; /* secondary text / borders */
+  --gray-soft: #f5f5f5; /* card backgrounds */
+  --accent: #00c853; /* signal green */
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}

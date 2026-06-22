@@ -1,0 +1,21 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en" class="bg-paper text-ink font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{Astro.title}</title>
+    <meta name="description" content={Astro.description} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- Open Graph tags can be added via front‑matter -->
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Nav />
+    <main class="flex-1 container mx-auto px-4 py-8">
+      {Astro.slug ? <slot /> : <slot name="default" />}
+    </main>
+    <Footer />
+  </body>
+</html>

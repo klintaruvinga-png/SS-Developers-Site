@@ -1,0 +1,63 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="hand-drawn-diagram">
+  <defs>
+    <style>
+      .hand-drawn-diagram {
+        background: #f8f9fa;
+        border: 1px solid #111;
+        border-radius: 4px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      }
+      .flow-node:hover {
+        fill-opacity: 0.8;
+      }
+      .flow-arrow {
+        marker-end: url(#arrowhead);
+        stroke-linecap: round;
+        stroke-dasharray: 4,2;
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" />
+
+  <!-- Hub Annotation -->
+  <text x="400" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#111">
+    PHP / WordPress API \– Source of Truth
+  </text>
+
+  <!-- Nodes -->
+  <g id="node-pine" class="flow-node">
+    <rect x="200" y="150" width="120" height="40" rx="2" ry="2" stroke="#111" stroke-width="1.5" fill="#f0f0f0" />
+    <text x="260" y="175" text-anchor="middle" font-family="monospace" font-size="12" fill="#1a1a1a">Pine Script Indicator</text>
+  </g>
+  <g id="node-php" class="flow-node hub">
+    <rect x="400" y="150" width="120" height="40" rx="2" ry="2" stroke="#0f0" stroke-width="2" fill="#e0ffe0" />
+    <text x="460" y="175" text-anchor="middle" font-family="monospace" font-size="12" fill="#000">PHP / WordPress API</text>
+  </g>
+  <g id="node-mt5" class="flow-node">
+    <rect x="600" y="150" width="120" height="40" rx="2" ry="2" stroke="#111" stroke-width="1.5" fill="#f0f0f0" />
+    <text x="660" y="175" text-anchor="middle" font-family="monospace" font-size="12" fill="#1a1a1a">MT5 Expert Advisors</text>
+  </g>
+  <g id="node-react" class="flow-node">
+    <rect x="200" y="250" width="120" height="40" rx="2" ry="2" stroke="#111" stroke-width="1.5" fill="#f0f0f0" />
+    <text x="260" y="275" text-anchor="middle" font-family="monospace" font-size="12" fill="#1a1a1a">React Dashboard</text>
+  </g>
+
+  <!-- Arrows -->
+  <g class="flow-arrow">
+    <path d="M 260 165 L 460 165" stroke="#111" stroke-width="1" fill="none" />
+    <polygon points="0,0 8,4 0,8" transform="translate(460, 165) rotate(0)" stroke="#111" fill="#111" />
+  </g>
+  <g class="flow-arrow">
+    <path d="M 460 165 L 660 165" stroke="#0f0" stroke-width="2" fill="none" />
+    <polygon points="0,0 8,4 0,8" transform="translate(660, 165) rotate(0)" stroke="#0f0" fill="#0f0" />
+  </g>
+  <g class="flow-arrow">
+    <path d="M 660 165 L 260 265" stroke="#111" stroke-width="1" fill="none" />
+    <polygon points="0,0 8,4 0,8" transform="translate(260, 265) rotate(180)" stroke="#111" fill="#111" />
+  </g>
+</svg>
