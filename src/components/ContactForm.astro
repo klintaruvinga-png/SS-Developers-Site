@@ -1,0 +1,54 @@
+---
+// Simple contact form using Formspree
+// The endpoint is read from the Vite env variable FORMSPREE_ENDPOINT
+const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT;
+if (!formspreeEndpoint) {
+  throw new Error("Missing FORMSPREE_ENDPOINT environment variable");
+}
+---
+<form
+  method="POST"
+  action={formspreeEndpoint}
+  class="max-w-xl mx-auto space-y-4"
+>
+  <label class="block">
+    <span class="text-gray-mid">Name</span>
+    <input type="text" name="name" required class="mt-1 block w-full border-gray-mid rounded" />
+  </label>
+
+  <label class="block">
+    <span class="text-gray-mid">Email</span>
+    <input type="email" name="email" required class="mt-1 block w-full border-gray-mid rounded" />
+  </label>
+
+  <label class="block">
+    <span class="text-gray-mid">Project Type</span>
+    <select name="project_type" required class="mt-1 block w-full border-gray-mid rounded">
+      <option value="">Select…</option>
+      <option>Trading infrastructure</option>
+      <option>Fintech platform</option>
+      <option>Data‑integrity layer</option>
+      <option>Other</option>
+    </select>
+  </label>
+
+  <label class="block">
+    <span class="text-gray-mid">Timeline</span>
+    <select name="timeline" required class="mt-1 block w-full border-gray-mid rounded">
+      <option value="">Select…</option>
+      <option>Immediate</option>
+      <option>1‑3 months</option>
+      <option>3‑6 months</option>
+      <option>More than 6 months</option>
+    </select>
+  </label>
+
+  <label class="block">
+    <span class="text-gray-mid">Message</span>
+    <textarea name="message" rows="4" required class="mt-1 block w-full border-gray-mid rounded"></textarea>
+  </label>
+
+  <button type="submit" class="px-6 py-2 bg-accent text-white rounded hover:bg-accent/90 transition">
+    Send
+  </button>
+</form>

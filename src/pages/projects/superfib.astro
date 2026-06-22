@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="SMC SuperFIB" description="Distributed‑systems solution for trading signals.">
+  <h1 class="font-mono text-3xl mb-6">SMC SuperFIB</h1>
+
+  <p class="mb-4">
+    A distributed‑systems solution that synchronises a Pine Script indicator,
+    a PHP/WordPress REST API (source of truth), MT5 Expert Advisors,
+    and a React dashboard.
+  </p>
+
+  <figure class="max-w-3xl mx-auto mb-6">
+    <img src="/images/diagram-system/superfib.svg"
+         alt="Hub‑and‑spoke flow: Pine Script Indicator → PHP/WordPress REST API (source of truth) ← MT5 Expert Advisors → React Dashboard."
+         class="border border-gray-mid" />
+    <figcaption class="text-sm text-gray-mid mt-2">
+      Hub‑and‑spoke data flow – PHP/WordPress API is the central source of truth.
+    </figcaption>
+  </figure>
+
+  <h2 class="font-mono text-2xl mb-4">Engineering Challenges Solved</h2>
+  <ul class="list-disc pl-6 space-y-1">
+    <li>Backend‑as‑source‑of‑truth across 3+ runtimes</li>
+    <li>Broker time normalisation (UTC+2 offset handling)</li>
+    <li>Staleness gates &amp; <code>STALE_HELD</code> blocker logic</li>
+    <li>Cross‑platform parity audits (chop‑threshold drift, HTF bias fixes)</li>
+    <li>Nearest‑minute rounding &amp; cached broker offsets to eliminate jitter</li>
+  </ul>
+</BaseLayout>
