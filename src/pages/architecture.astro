@@ -1,28 +1,28 @@
 ---
-export const layout = "../layouts/BaseLayout.astro";
-export const title = "Architecture";
-export const description = "Flow diagrams showing the cross‑system architecture of the SuperFIB and Stokvel Society case studies.";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<h1 class="font-mono text-3xl mb-6">Architecture</h1>
+<BaseLayout title="Architecture" description="Flow diagrams showing the cross‑system architecture of the SuperFIB and Stokvel Society case studies.">
+  <h1 class="font-mono text-3xl mb-6">Architecture</h1>
 
-<!-- SuperFIB diagram -->
-<section class="mb-12">
-  <h2 class="font-mono text-2xl mb-4">SuperFIB Architecture</h2>
-  <figure class="max-w-4xl mx-auto">
-    <img src="/images/diagram-system/superfib.svg"
-         alt="Flow diagram: Pine Script Indicator → PHP/WordPress REST API (source of truth) ← MT5 Expert Advisors → React Dashboard. PHP/WordPress API is centered as the hub, with the other three systems as spokes."
-         class="border border-gray-mid" />
-    <figcaption class="text-sm text-gray-mid mt-2">Hub‑and‑spoke data flow – PHP/WordPress API is the source of truth.</figcaption>
-  </figure>
-</section>
+  <!-- SuperFIB diagram -->
+  <section class="mb-12">
+    <h2 class="font-mono text-2xl mb-4">SuperFIB Architecture</h2>
+    <figure class="max-w-4xl mx-auto">
+      <img src="/images/diagram-system/superfib.svg"
+           alt="Flow diagram: Pine Script Indicator → PHP/WordPress REST API (source of truth) ← MT5 Expert Advisors → React Dashboard. PHP/WordPress API is centered as the hub, with the other three systems as spokes."
+           class="border border-gray-mid" />
+      <figcaption class="text-sm text-gray-mid mt-2">Hub‑and‑spoke data flow – PHP/WordPress API is the source of truth.</figcaption>
+    </figure>
+  </section>
 
-<!-- Stokvel diagram -->
-<section>
-  <h2 class="font-mono text-2xl mb-4">Stokvel Society Architecture</h2>
-  <figure class="max-w-4xl mx-auto">
-    <img src="/images/diagram-system/stokvel-society.svg"
-         alt="Flow diagram: Member Contribution → Stokvel Ledger / Trust Layer → Payout. Linear three‑step flow showing how contributions are recorded and later distributed."
-         class="border border-gray-mid" />
-    <figcaption class="text-sm text-gray-mid mt-2">Linear flow of member contributions through the ledger to payouts.</figcaption>
-  </figure>
-</section>
+  <!-- Stokvel diagram -->
+  <section>
+    <h2 class="font-mono text-2xl mb-4">Stokvel Society Architecture</h2>
+    <figure class="max-w-4xl mx-auto">
+      <img src="/images/diagram-system/stokvel-society.svg"
+           alt="Flow diagram: Member Contribution → Stokvel Ledger / Trust Layer → Payout. Linear three‑step flow showing how contributions are recorded and later distributed."
+           class="border border-gray-mid" />
+      <figcaption class="text-sm text-gray-mid mt-2">Linear flow of member contributions through the ledger to payouts.</figcaption>
+    </figure>
+  </section>
+</BaseLayout>

@@ -1,8 +1,8 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
-export const layout = "../layouts/BaseLayout.astro";
-export const title = "Contact";
-export const description = "Qualifying contact form for potential engagements.";
 ---
-<h1 class="font-mono text-3xl mb-6">Contact</h1>
-<ContactForm />
+<BaseLayout title="Contact" description="Qualifying contact form for potential engagements.">
+  <h1 class="font-mono text-3xl mb-6">Contact</h1>
+  <ContactForm />
+</BaseLayout>
