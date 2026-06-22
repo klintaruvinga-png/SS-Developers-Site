@@ -1,8 +1,10 @@
 ---
 // Simple contact form using Formspree
 // The endpoint is read from the Vite env variable FORMSPREE_ENDPOINT
-// At build time, this may be empty; it should be set in production
-const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT || "";
+const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT;
+if (!formspreeEndpoint) {
+  throw new Error("Missing FORMSPREE_ENDPOINT environment variable");
+}
 ---
 <form
   method="POST"
