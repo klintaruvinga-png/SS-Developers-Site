@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import DogCursor from '../components/DogCursor.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
@@ -15,6 +16,7 @@ const { title, description } = Astro.props;
   </head>
   <body class="flex flex-col min-h-screen">
     <Nav />
+    <DogCursor />
     <main class="flex-1 container mx-auto px-4 py-8">
       <slot />
     </main>
