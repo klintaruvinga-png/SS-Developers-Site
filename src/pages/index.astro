@@ -1,14 +1,320 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Home" description="Personal engineering portfolio showcasing real systems for trading, fintech, and automation.">
-  <div class="text-center max-w-3xl mx-auto">
-    <div class="hand-drawn-frame p-10 mb-10">
-      <h1 class="hand-drawn-heading text-4xl sm:text-5xl font-semibold mb-6">I build real systems for trading, fintech, and automation.</h1>
-      <p class="text-base sm:text-lg leading-8 text-gray-mid mb-8">From MT5 trading infrastructure to WordPress REST APIs, React dashboards, data‑integrity layers, and AI‑assisted dev workflows — I build and harden software where correctness matters.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="/projects" class="hand-drawn-cta">Explore the Work</a>
-        <a href="/work-with-me" class="hand-drawn-cta">Work With Me</a>
+<BaseLayout title="SS Developers — Software Built Right" description="SS Developers — I build websites, apps, and software that work. Fast, reliable, and built to last.">
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Open for new projects
+        </div>
+        <h1>
+          I build software<br>
+          that <span class="accent">actually works.</span>
+        </h1>
+        <p class="hero-sub">
+          Websites, mobile apps, and custom software — built from scratch and built to last.
+          You get clean results, on time, without the jargon.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start your project</a>
+          <a href="#work" class="btn-secondary">See my work</a>
+        </div>
       </div>
-  </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-canvas">
+          <div class="code-window">
+            <div class="code-titlebar">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+              <span class="code-filename">ss-dev/home.tsx</span>
+            </div>
+            <div class="code-body">
+              <pre><code>
+<span class="cl c-comment">// Product launch ready code</span>
+<span class="cl c-keyword">import</span> <span class="c-var">React</span> <span class="c-keyword">from</span> <span class="c-str">'react'</span>;
+<span class="cl c-keyword">const</span> <span class="c-var">launch</span> = () => <span class="c-str">'Fast, reliable, built to last.'</span>;
+              </code></pre>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card-1">
+            <div class="stat-icon stat-icon-green">✓</div>
+            <div>
+              <div class="stat-label">Years in code</div>
+              <div class="stat-value">6+</div>
+            </div>
+          </div>
+          <div class="stat-card stat-card-2">
+            <div class="stat-icon stat-icon-dark">⚡</div>
+            <div>
+              <div class="stat-label">Projects shipped</div>
+              <div class="stat-value">20+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-strip">
+      <div class="hero-strip-inner">
+        <span class="hero-strip-label">Built with</span>
+        <div class="tech-pills">
+          <span class="tech-pill"><span class="tech-pill-dot"></span>React</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>TypeScript</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>Next.js</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>WordPress</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>React Native</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>Node.js</span>
+          <span class="tech-pill"><span class="tech-pill-dot"></span>PHP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip" aria-label="Track record">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item fade-up">
+          <div class="proof-num">6<span>+</span></div>
+          <div class="proof-desc">Years building production software across web, mobile, and backend systems</div>
+        </div>
+        <div class="proof-item fade-up" style="transition-delay:0.1s">
+          <div class="proof-num">20<span>+</span></div>
+          <div class="proof-desc">Projects shipped — from simple websites to complex multi-platform systems</div>
+        </div>
+        <div class="proof-item fade-up" style="transition-delay:0.2s">
+          <div class="proof-num">0</div>
+          <div class="proof-desc">Projects abandoned mid-build. I finish what I start.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-label="Services">
+    <div class="container">
+      <div class="section-eyebrow">What I do</div>
+      <h2 class="section-title">If it runs on a screen,<br>I can build it.</h2>
+      <p class="section-sub">
+        You describe what you need in plain English. I handle the rest — design, code, testing, and launch.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">🖥️</div>
+          <div class="service-title">Websites</div>
+          <div class="service-desc">A site that loads fast, looks sharp on any phone, and turns visitors into customers. No templates — built for your business.</div>
+          <div class="service-tags">
+            <span class="service-tag">React</span>
+            <span class="service-tag">SEO</span>
+            <span class="service-tag">Performance</span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.07s">
+          <div class="service-icon">📱</div>
+          <div class="service-title">Mobile Apps</div>
+          <div class="service-desc">One codebase, two platforms. Your app runs on iPhone and Android without paying to build twice.</div>
+          <div class="service-tags">
+            <span class="service-tag">React Native</span>
+            <span class="service-tag">UX</span>
+            <span class="service-tag">Release</span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.14s">
+          <div class="service-icon">📊</div>
+          <div class="service-title">Dashboards & Admin Tools</div>
+          <div class="service-desc">See your data clearly. Manage your business without spreadsheets. Custom-built for exactly how you work.</div>
+          <div class="service-tags">
+            <span class="service-tag">Data</span>
+            <span class="service-tag">UX</span>
+            <span class="service-tag">Security</span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.07s">
+          <div class="service-icon">⚙️</div>
+          <div class="service-title">Automation</div>
+          <div class="service-desc">Stop doing the same thing manually every day. I build systems that run the repetitive work so you don't have to.</div>
+          <div class="service-tags">
+            <span class="service-tag">Workflows</span>
+            <span class="service-tag">APIs</span>
+            <span class="service-tag">Integrations</span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.14s">
+          <div class="service-icon">🛒</div>
+          <div class="service-title">E-commerce</div>
+          <div class="service-desc">Online stores that sell. From product listings to payment processing to order tracking — all in one place.</div>
+          <div class="service-tags">
+            <span class="service-tag">Commerce</span>
+            <span class="service-tag">Payments</span>
+            <span class="service-tag">UX</span>
+          </div>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.21s">
+          <div class="service-icon">🔧</div>
+          <div class="service-title">Fix & Improve Existing Software</div>
+          <div class="service-desc">Slow site, broken feature, or code someone else left behind? I audit it, fix what's wrong, and make it faster.</div>
+          <div class="service-tags">
+            <span class="service-tag">Audit</span>
+            <span class="service-tag">Refactor</span>
+            <span class="service-tag">Stability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process" aria-label="Process">
+    <div class="process-inner">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">From idea to live — in four steps.</h2>
+      <p class="section-sub">No long contracts. No mystery. You always know where things stand.</p>
+
+      <div class="process-steps">
+        <div class="step active fade-up">
+          <div class="step-num">1</div>
+          <div class="step-title">You talk, I listen</div>
+          <div class="step-desc">Tell me what you want to build and why. No jargon needed. I ask the right questions.</div>
+        </div>
+        <div class="step fade-up" style="transition-delay:0.1s">
+          <div class="step-num">2</div>
+          <div class="step-title">I map it out</div>
+          <div class="step-desc">You see a clear plan and a fixed price before any code gets written.</div>
+        </div>
+        <div class="step fade-up" style="transition-delay:0.2s">
+          <div class="step-num">3</div>
+          <div class="step-title">I build it</div>
+          <div class="step-desc">You get progress updates throughout. No radio silence, no surprises at the end.</div>
+        </div>
+        <div class="step fade-up" style="transition-delay:0.3s">
+          <div class="step-num">4</div>
+          <div class="step-title">You launch</div>
+          <div class="step-desc">I handle deployment and stay around for 30 days to fix anything that comes up.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-label="Selected work">
+    <div class="container">
+      <div class="section-eyebrow">Selected work</div>
+      <h2 class="section-title">Things I've built.</h2>
+      <p class="section-sub">Real projects, production systems. Not demos.</p>
+
+      <div class="work-grid">
+        <div class="project-card fade-up">
+          <div class="project-body">
+            <div class="project-category">Trading infrastructure</div>
+            <div class="project-name">SMC SuperFIB</div>
+            <div class="project-desc">A high-availability execution engine for algorithmic trading and risk monitoring with low latency and built-in auditability.</div>
+            <div class="project-stack">
+              <span class="stack-badge">React</span>
+              <span class="stack-badge">Node.js</span>
+              <span class="stack-badge">AWS</span>
+            </div>
+            <a href="/projects/superfib" class="project-link">View case study</a>
+          </div>
+        </div>
+        <div class="project-card fade-up" style="transition-delay:0.12s">
+          <div class="project-body">
+            <div class="project-category">Community finance</div>
+            <div class="project-name">Stokvel Society</div>
+            <div class="project-desc">A membership platform for cooperative savings, with secure onboarding, contribution tracking, and reporting tools.</div>
+            <div class="project-stack">
+              <span class="stack-badge">Astro</span>
+              <span class="stack-badge">Tailwind</span>
+              <span class="stack-badge">Stripe</span>
+            </div>
+            <a href="/projects/stokvel" class="project-link">View case study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-label="Why work with me">
+    <div class="container">
+      <div class="section-eyebrow">Why work with me</div>
+      <h2 class="section-title">You don't need to understand code<br>to work with me.</h2>
+      <p class="section-sub">Most developers build what they want to build. I build what you need.</p>
+
+      <div class="why-grid">
+        <div class="why-item fade-up">
+          <div class="why-check">✓</div>
+          <div>
+            <div class="why-title">Clear direction</div>
+            <div class="why-desc">Every project starts with a simple plan and measurable milestones.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.07s">
+          <div class="why-check">✓</div>
+          <div>
+            <div class="why-title">Fast delivery</div>
+            <div class="why-desc">I ship usable work quickly and keep the scope tight around what matters.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.14s">
+          <div class="why-check">✓</div>
+          <div>
+            <div class="why-title">Reliable support</div>
+            <div class="why-desc">I stay on hand after launch to fix things and keep the system stable.</div>
+          </div>
+        </div>
+        <div class="why-item fade-up" style="transition-delay:0.21s">
+          <div class="why-check">✓</div>
+          <div>
+            <div class="why-title">No nonsense</div>
+            <div class="why-desc">You get honest estimates and a practical approach, not inflated promises.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="terminal-banner" aria-hidden="true">
+    <div class="terminal-wrap">
+      <div class="terminal-label">Under the hood</div>
+      <div class="terminal-box">
+        <div class="terminal-bar">
+          <div class="terminal-title">ss-developers.local</div>
+        </div>
+        <div class="terminal-body">
+          <div class="t-prompt">$</div> <span class="t-cmd">npm run build</span>
+          <div class="t-out">Build complete — 9 pages generated.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="section-eyebrow">Get in touch</div>
+        <h2 class="section-title">Got a project in mind?</h2>
+        <p class="section-sub" style="margin-bottom:0">
+          Tell me what you're building and I’ll tell you how we make it work.
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card fade-up">
+            <div class="contact-card-icon">✉️</div>
+            <div>
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">hello@ss-developers.co.za</div>
+            </div>
+          </div>
+          <div class="contact-card fade-up" style="transition-delay:0.07s">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <div class="contact-card-label">Location</div>
+              <div class="contact-card-value">Cape Town, South Africa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
