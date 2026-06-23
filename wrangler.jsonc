@@ -1,8 +1,8 @@
 {
   // SS Developers portfolio — Cloudflare Workers static asset deployment
   // Uses Workers-native `assets` binding. Do NOT use pages_build_output_dir.
-  "name": "ss-developers",
-  "compatibility_date": "2026-06-23",
+  "name": "ssdevsite",
+  "compatibility_date": "2025-10-19",
   "assets": {
     "directory": "./dist"
   },
