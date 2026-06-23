@@ -8,7 +8,7 @@
   },
   "routes": [
     {
-      "pattern": "dev.stokvelsociety.co.za",
+      "pattern": "dev.stokvelsociety.co.za/*",
       "zone_name": "stokvelsociety.co.za"
     }
   ]
