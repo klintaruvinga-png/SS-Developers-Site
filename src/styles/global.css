@@ -7,12 +7,17 @@
   --accent-red: #ff5f57;
   --accent-yellow: #febc2e;
   --accent-green: #28c840;
-  --ink: var(--ink);
-  --paper: var(--paper);
+  --ink: #111111;
+  --ink-2: #1a1a1a;
+  --ink-3: #6b7280;
+  --paper: #ffffff;
   --gray-mid: #6b7280;
-  --gray-soft: var(--gray-soft);
-  --silver: var(--silver);
+  --gray-soft: #f2f2ef;
+  --silver: #e2e2de;
   --accent: #73777f;
+  --green: #00c875;
+  --green-dim: #009960;
+  --green-pale: #e6f9f1;
   --surface: rgba(255,255,255,0.94);
   --shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
   --radius: 1.5rem;
@@ -76,7 +81,7 @@ body {
   align-items: center;
   gap: 8px;
   background: var(--green-pale);
-  border: 1px solid #b3ead2;
+  border: 1px solid var(--green-pale);
   border-radius: 100px;
   padding: 5px 14px;
   font-size: 0.8rem;
@@ -148,7 +153,7 @@ body {
 
 .btn-primary:hover {
   background: var(--green-dim);
-  color: #ffffff;
+  color: var(--paper);
   transform: translateY(-2px);
 }
 
@@ -156,7 +161,7 @@ body {
   background: transparent;
   color: var(--ink-2);
   font-weight: 600;
-  border: 1.5px solid #e2e2de;
+  border: 1.5px solid var(--silver);
 }
 
 .btn-secondary:hover {
@@ -488,7 +493,7 @@ body {
   left: 12%;
   right: 12%;
   height: 2px;
-  background: linear-gradient(90deg, var(--green) 0%, #e2e2de 100%);
+  background: linear-gradient(90deg, var(--green) 0%, var(--silver) 100%);
   z-index: 0;
 }
 
@@ -782,7 +787,7 @@ body {
 
 .contact-card:hover {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(0,200,117,0.1);
+  box-shadow: 0 0 0 3px var(--green-pale);
   transform: translateY(-2px);
 }
 
