@@ -3,11 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout title="Home" description="Personal engineering portfolio showcasing real systems for trading, fintech, and automation.">
   <div class="text-center max-w-3xl mx-auto">
-    <h1 class="font-mono text-4xl mb-4">I build real systems for trading, fintech, and automation.</h1>
-    <p class="text-lg mb-8">From MT5 trading infrastructure to WordPress REST APIs, React dashboards, data‑integrity layers, and AI‑assisted dev workflows — I build and harden software where correctness matters.</p>
-    <div class="flex justify-center space-x-6">
-      <a href="/projects" class="px-6 py-2 bg-accent text-white rounded hover:bg-accent/90 transition">Explore the Work</a>
-      <a href="/work-with-me" class="px-6 py-2 border border-accent text-accent rounded hover:bg-accent hover:text-white transition">Work With Me</a>
-    </div>
+    <div class="hand-drawn-frame p-10 mb-10">
+      <h1 class="hand-drawn-heading text-4xl sm:text-5xl font-semibold mb-6">I build real systems for trading, fintech, and automation.</h1>
+      <p class="text-base sm:text-lg leading-8 text-gray-mid mb-8">From MT5 trading infrastructure to WordPress REST APIs, React dashboards, data‑integrity layers, and AI‑assisted dev workflows — I build and harden software where correctness matters.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/projects" class="hand-drawn-cta">Explore the Work</a>
+        <a href="/work-with-me" class="hand-drawn-cta">Work With Me</a>
+      </div>
   </div>
 </BaseLayout>
