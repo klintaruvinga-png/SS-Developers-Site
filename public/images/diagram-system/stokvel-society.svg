@@ -2,7 +2,7 @@
   <defs>
     <style>
       .hand-drawn-diagram {
-        background: #f8f9fa;
+        background: #e5e7eb;
         border: 1px solid #111;
         border-radius: 4px;
         box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -22,7 +22,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="300" fill="#f8f9fa" />
+  <rect width="800" height="300" fill="#e5e7eb" />
 
   <!-- Title -->
   <text x="400" y="30" text-anchor="middle" font-family="monospace" font-size="14" fill="#111">
@@ -45,11 +45,11 @@
 
   <!-- Arrows -->
   <g class="flow-arrow">
-    <path d="M 220 140 L 300 140" stroke="#111" stroke-width="1" fill="none" />
-    <polygon points="0,0 8,4 0,8" transform="translate(300, 140) rotate(0)" stroke="#111" fill="#111" />
+    <path d="M 220 140 L 300 140" stroke="#e5e7eb" stroke-width="1" fill="none" />
+    <polygon points="0,0 8,4 0,8" transform="translate(300, 140) rotate(0)" stroke="#e5e7eb" fill="#111" />
   </g>
   <g class="flow-arrow">
-    <path d="M 420 140 L 500 140" stroke="#111" stroke-width="1" fill="none" />
-    <polygon points="0,0 8,4 0,8" transform="translate(500, 140) rotate(0)" stroke="#111" fill="#111" />
+    <path d="M 420 140 L 500 140" stroke="#e5e7eb" stroke-width="1" fill="none" />
+    <polygon points="0,0 8,4 0,8" transform="translate(500, 140) rotate(0)" stroke="#e5e7eb" fill="#111" />
   </g>
 </svg>
