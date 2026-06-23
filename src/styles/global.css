@@ -4,15 +4,147 @@
 @tailwind utilities;
 
 :root {
-  --ink: #222222; /* near‑black */
-  --paper: #ffffff; /* off‑white */
-  --gray-mid: #777777; /* secondary text / borders */
-  --gray-soft: #f5f5f5; /* card backgrounds */
-  --accent: #00c853; /* signal green */
+  --ink: #111111;
+  --paper: #f8f8f8;
+  --gray-mid: #6b7280;
+  --gray-soft: #eff2f5;
+  --silver: #c1c7cd;
+  --accent: #73777f;
+  --surface: rgba(255,255,255,0.94);
+  --shadow: 0 24px 60px rgba(17, 17, 17, 0.08);
+  --radius: 1.5rem;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--paper);
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
+              linear-gradient(180deg, #fbfbfb 0%, #f4f5f7 100%);
   color: var(--ink);
   font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--silver);
+  color: var(--ink);
+}
+
+.hand-drawn-frame {
+  border: 1px dashed var(--silver);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hand-drawn-frame::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px dashed rgba(17, 17, 17, 0.08);
+  pointer-events: none;
+}
+
+.hand-drawn-heading {
+  display: inline-flex;
+  position: relative;
+  padding-bottom: 0.35rem;
+}
+
+.hand-drawn-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: linear-gradient(90deg, transparent 0%, var(--silver) 20%, transparent 100%);
+  transform: skewX(-12deg);
+  border-radius: 999px;
+}
+
+.hand-drawn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.hand-drawn-cta:hover,
+.hand-drawn-cta:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(17, 17, 17, 0.1);
+}
+
+.hand-drawn-card {
+  border: 1px dashed var(--silver);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px rgba(17, 17, 17, 0.06);
+  padding: 1.75rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.hand-drawn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 60px rgba(17, 17, 17, 0.1);
+}
+
+.hand-drawn-input,
+.hand-drawn-textarea,
+.hand-drawn-select {
+  width: 100%;
+  border: 1px solid var(--silver);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.95rem 1rem;
+  color: var(--ink);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.hand-drawn-input:focus,
+.hand-drawn-textarea:focus,
+.hand-drawn-select:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
+}
+
+.hand-drawn-figure {
+  border: 1px dashed var(--silver);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.hero-illustration {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  color: var(--ink);
 }

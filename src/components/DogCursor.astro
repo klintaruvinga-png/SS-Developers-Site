@@ -26,10 +26,34 @@
 </script>
 
 <style>
-  #dog-cursor img {
-    transition: transform 0.2s ease-out;
+  #dog-cursor {
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
   }
+
+  #dog-cursor img {
+    width: 5rem;
+    height: auto;
+    transform-origin: center center;
+    transition: transform 0.18s ease-out, filter 0.18s ease-out;
+    filter: drop-shadow(0 10px 20px rgba(17, 17, 17, 0.12));
+  }
+
   #dog-cursor.sitting img {
-    transform: translateY(10px) rotate(10deg);
+    transform: translateY(8px) rotate(6deg) scale(0.96);
+  }
+
+  #dog-cursor.motion img {
+    animation: wag 1.2s ease-in-out infinite;
+  }
+
+  @keyframes wag {
+    0%, 100% {
+      transform: translateY(0px) rotate(-1deg);
+    }
+    50% {
+      transform: translateY(-1px) rotate(2deg);
+    }
   }
 </style>
