@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://dev.stokvelsociety.co.za',
+  output: 'static',
   integrations: [react(), tailwind()],
   build: {
     format: 'directory',
