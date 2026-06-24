@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "astro build && wrangler deploy",
+    "smoke-test": "node scripts/smoke-test.js",
+    "test:full": "npm run build && npm run smoke-test",
+    "plan-and-research": "node scripts/plan-and-research.js --repo ."
   },
   "dependencies": {
     "@astrojs/react": "^3.0.0",
@@ -24,6 +27,9 @@
     "wrangler": "^3.114.17"
   },
   "type": "module",
+  "bin": {
+    "plan-and-research": "./scripts/plan-and-research.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/klintaruvinga-png/SS-Developers-Site.git"
