@@ -40,6 +40,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Smoke Test
+        run: node scripts/smoke-test.js
+
       - name: Deploy
         uses: cloudflare/wrangler-action@bbf08b118d0e2ee8b0d1a69a6a1b0e18ee59b2da
         with:

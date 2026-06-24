@@ -28,7 +28,8 @@
 - [ ] Any public repo links reviewed for accidental leakage.
 
 ## Deployment Checklist
-- [ ] Build succeeds without errors.
+- [ ] Build succeeds without errors (`npm run build`).
+- [ ] Automated smoke tests pass (`npm run smoke-test` — validates critical pages, HTML structure, and deployment readiness).
 - [ ] Production metadata set.
 - [ ] Responsive layout verified.
 - [ ] Performance metrics acceptable.
