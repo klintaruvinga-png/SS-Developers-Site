@@ -3,3 +3,15 @@ node_modules
 .astro/
 dist/
 .claude
+
+# Development tool extensions and skills
+.agents/
+.codex/
+.cursor/
+.gemini/
+.github/hooks/
+.github/skills/
+.impeccable/
+
+# Design reference materials (not needed in repo)
+design templates/

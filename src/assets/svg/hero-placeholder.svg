@@ -1,0 +1,15 @@
+<!-- Hero illustration placeholder with server rack theme -->
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" aria-label="Server rack with mint code overlay representing technical foundation">
+  <rect width="1920" height="1080" fill="#0d1117"/>
+  <!-- Circuit pattern overlay -->
+  <path d="M50 50h1820v1000H50z" fill="none" stroke="#6c757d" stroke-width="1"/>
+  <circle cx="100" cy="100" r="8" fill="#00c875"/>
+  <circle cx="200" cy="150" r="6" fill="#adb5bd"/>
+  <circle cx="300" cy="200" r="4" fill="#ff6b6b"/>
+  <circle cx="400" cy="250" r="12" fill="#198754"/>
+  <!-- Glowing code elements -->
+  <text x="100" y="120" font-family="monospace" font-size="16" fill="#00c875" opacity="0.7">// Product launch ready code</text>
+  <text x="100" y="150" font-family="monospace" font-size="16" fill="#00c875" opacity="0.5">import { React } from 'react';</text>
+  <text x="100" y="180" font-family="monospace" font-size="16" fill="#00c875" opacity="0.3">export const launch = () => {</text>
+</svg>
+<!-- REAL IMAGE PROMPT: 'High-resolution hero image of a dark server rack with glowing mint code lines overlaying it. Subtle circuitry textures with mint accents, 1920x1080' -->
