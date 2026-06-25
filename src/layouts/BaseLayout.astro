@@ -4,7 +4,16 @@ import DogCursor from '../components/DogCursor.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  image = '/images/redesign/hero-system-surface.png',
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
 ---
 <html lang="en">
   <head>
@@ -12,7 +21,27 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="SS Developers" />
+    <meta name="application-name" content="SS Developers" />
+    <meta name="apple-mobile-web-app-title" content="SS Developers" />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
     <meta name="theme-color" content="#071018" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon-64.png" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:site_name" content="SS Developers" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="SS Developers technical portfolio preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
@@ -23,5 +52,42 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (reduceMotion.matches) return;
+
+        const revealNodes = Array.from(document.querySelectorAll("[data-reveal]"));
+        if (!revealNodes.length) return;
+
+        const markVisible = (node) => {
+          const rect = node.getBoundingClientRect();
+          const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+          if (rect.top < viewportHeight * 0.88 && rect.bottom > viewportHeight * 0.12) {
+            node.classList.add("is-inview");
+          }
+        };
+
+        revealNodes.forEach(markVisible);
+        document.body.dataset.motionReady = "true";
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-inview");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px",
+          }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      })();
+    </script>
   </body>
 </html>

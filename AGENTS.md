@@ -31,6 +31,7 @@ This repository is a static Astro portfolio site for a solo engineering practice
 - Emphasize real systems engineering, architecture, and credible case study narrative.
 - Keep diagrams and visuals focused on flow/topology; do not expose proprietary formulas or sensitive logic.
 - Preserve the site’s minimal design language and restrained accent usage.
+- Follow an 8px base spacing system with 4px increments. Prefer the shared spacing tokens in `src/styles/global.css` over one-off spacing values.
 - Do not add runtime backend dependencies or server-side features unless explicitly required by the project vision.
 
 ## Documentation references

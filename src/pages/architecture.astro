@@ -1,63 +1,14 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Architecture" description="System topology for the SuperFIB and Stokvel Society case studies.">
-  <section class="page-section">
-    <div class="container page-hero-layout">
-      <div class="section-head">
-        <div class="page-intro">Architecture</div>
-        <h1 class="page-title">Topology over theater.</h1>
-        <p class="page-copy">
-          I use diagrams to explain where authority lives, how state moves, and what the system has to keep in sync. I do not use them to leak implementation details that should stay private.
-        </p>
-      </div>
-
-      <div class="manifest">
-        <div class="manifest-row">
-          <strong>What these diagrams show</strong>
-          <p>Systems, handoff points, and the direction of trust.</p>
-        </div>
-        <div class="manifest-row">
-          <strong>What they do not show</strong>
-          <p>Trading logic, thresholds, or any implementation detail that would expose sensitive behavior.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="container feature-stack">
-      <article class="project-entry">
-        <div class="detail-header stack-lg">
-          <div class="eyeline">SuperFIB</div>
-          <h2 class="detail-title">Hub-and-spoke control across trading surfaces</h2>
-          <p class="panel-copy">
-            The backend API is the authority. The indicator, execution layer, and dashboard are coordinated around it so parity can be checked and stale state can be caught early.
-          </p>
-        </div>
-        <div class="diagram-panel">
-          <div class="diagram-frame">
-            <img src="/images/diagram-system/superfib.svg" alt="Flow diagram showing Pine Script, a WordPress API as source of truth, MT5 expert advisors, and a React dashboard." />
-          </div>
-          <p class="diagram-caption">The point of the shape is control. One authoritative state reduces ambiguity when multiple runtimes need to agree.</p>
-        </div>
-      </article>
-
-      <article class="project-entry">
-        <div class="detail-header stack-lg">
-          <div class="eyeline">Stokvel Society</div>
-          <h2 class="detail-title">A clear finance flow for contributions and payouts</h2>
-          <p class="panel-copy">
-            This system is intentionally simpler in shape. The important thing is that money movement stays understandable and every step can be explained to a member or administrator.
-          </p>
-        </div>
-        <div class="diagram-panel">
-          <div class="diagram-frame">
-            <img src="/images/diagram-system/stokvel-society.svg" alt="Linear flow diagram showing member contributions moving into a ledger or trust layer and then into payouts." />
-          </div>
-          <p class="diagram-caption">The diagram focuses on readability because the product itself depends on trust and clarity more than visual complexity.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-</BaseLayout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/projects" />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="/projects" />
+    <title>Architecture moved</title>
+  </head>
+  <body>
+    <p>Architecture is now part of the <a href="/projects">Projects</a> page.</p>
+  </body>
+</html>
