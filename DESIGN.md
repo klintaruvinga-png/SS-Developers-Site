@@ -2,11 +2,15 @@
 name: "SS Developers Site"
 description: "Brand‑focused informative landing site"
 colors:
-  primary: "#00c875" # Mint
+  green: "#00c875" # Mint (primary)
+  green-dim: "#00a860" # Darker Mint (hover state)
+  green-pale: "#e6f9f2" # Light Mint (badge background)
   accent-red: "#ff5f57" # Coral
   accent-yellow: "#febc2e" # Goldenrod
   accent-green: "#28c840" # Lime
   ink: "#111111" # Ink
+  ink-2: "#111111" # Ink (button text)
+  ink-3: "#6b7280" # Slate (softer tone)
   paper: "#ffffff" # Paper
   gray-mid: "#6b7280" # Slate
   gray-soft: "#f2f2ef" # Soft Gray
@@ -14,6 +18,8 @@ colors:
   accent: "#73777f" # Stone
 rounded:
   sm: "1.5rem"
+radius: "1.5rem"
+ease: "cubic-bezier(0.4, 0, 0.2, 1)"
 spacing:
   sm: "8px"
   md: "16px"
@@ -38,7 +44,7 @@ typography:
 
 **Creative North Star:** "The Reliable Beacon"
 
-A confident, trustworthy, and steady visual language that guides visitors through clear information hierarchy. The design balances bold accent greens with restrained neutrals, delivering an approachable yet professional feel. **Do not** fall into generic SaaS‑metric layouts, gradient text, or side‑stripe borders.
+A confident, trustworthy, and steady visual language that guides visitors through clear information hierarchy. The design balances bold accent greens with restrained neutrals, delivering an approachable yet professional feel. **Do not** fall into generic SaaS‑metric layouts, gradient text, or side‑stripe borders greater than 1px.
 
 ### Key Characteristics:
 - **Tactile and Confident** components with solid shapes and clear hierarchy.
