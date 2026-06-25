@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const heroPlaceholder = new URL("../assets/svg/hero-placeholder.svg", import.meta.url).href;
 ---
 <BaseLayout title="SS Developers — Software Built Right" description="SS Developers — I build websites, apps, and software that work. Fast, reliable, and built to last.">
   <section class="hero" aria-label="Introduction">
@@ -24,6 +25,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <div class="hero-visual" aria-hidden="true">
+          <img src={heroPlaceholder} alt="Illustration of a server rack with mint code lines representing the under-the-hood theme" loading="lazy" class="hero-placeholder" />
         <div class="hero-canvas">
           <div class="code-window">
             <div class="code-titlebar">
