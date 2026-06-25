@@ -1,5 +1,5 @@
 ---
-const pathname = Astro.url.pathname;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/projects', label: 'Projects' },
@@ -21,11 +21,14 @@ const navItems = [
     </a>
 
     <nav class="nav-links nav-links-desktop" aria-label="Primary">
-      {navItems.map((item) => (
-        <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
-          {item.label}
-        </a>
-      ))}
+      {navItems.map((item) => {
+        const normalizedHref = item.href.replace(/\/$/, '') || '/';
+        return (
+          <a href={item.href} aria-current={pathname === normalizedHref ? 'page' : undefined}>
+            {item.label}
+          </a>
+        );
+      })}
     </nav>
 
     <a href="/contact" class="nav-cta nav-cta-desktop">Start a build</a>
@@ -34,11 +37,14 @@ const navItems = [
       <summary>Menu</summary>
       <div class="nav-mobile-panel">
         <nav class="nav-mobile-links" aria-label="Mobile">
-          {navItems.map((item) => (
-            <a href={item.href} aria-current={pathname === item.href ? 'page' : undefined}>
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const normalizedHref = item.href.replace(/\/$/, '') || '/';
+            return (
+              <a href={item.href} aria-current={pathname === normalizedHref ? 'page' : undefined}>
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
         <a href="/contact" class="button-primary">Start a build</a>
       </div>

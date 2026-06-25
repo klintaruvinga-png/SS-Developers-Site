@@ -1,6 +1,7 @@
 ---
-const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT || "";
+const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT;
 ---
+{formspreeEndpoint ? (
 <form method="POST" action={formspreeEndpoint} class="contact-form">
   <div class="form-grid">
     <div class="field">
@@ -48,3 +49,8 @@ const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT || "";
 
   <button type="submit" class="button-primary">Send project note</button>
 </form>
+) : (
+<div class="contact-form">
+  <p>Contact form is currently unavailable. Please reach out via email at <a href="mailto:hello@ss-developers.co.za">hello@ss-developers.co.za</a></p>
+</div>
+)}

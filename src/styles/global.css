@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap";
 
 @tailwind base;
 @tailwind components;
@@ -26,7 +26,7 @@
   --max-width: 1180px;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Chivo", "Arial Narrow", sans-serif;
-  --font-code: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-code: "JetBrains Mono", "SFMono-Regular", "Consolas", monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 

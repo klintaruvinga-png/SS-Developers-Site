@@ -81,14 +81,17 @@ The design rejects startup theater. It does not use a bright white canvas, soft-
 The palette is committed and nocturnal. Mint is the signal color, not the background color. The darker neutrals carry most of the surface area so the green can retain authority.
 
 ### Primary
+
 - **Signal Mint** (`oklch(0.8 0.17 162)`): Primary actions, active emphasis, and short high-value highlights.
 - **Compressed Mint** (`oklch(0.72 0.17 162)`): Hover state for the primary action and stronger accent moments.
 
 ### Secondary
+
 - **Control Gold** (`oklch(0.8 0.11 92)`): Tiny system accents such as console markers. Never a dominant page color.
 - **Fault Red** (`oklch(0.68 0.17 28)`): Error-state accent and system warning punctuation only.
 
 ### Neutral
+
 - **Night Field** (`oklch(0.16 0.02 248)`): Main page background.
 - **Lower Deck** (`oklch(0.13 0.02 248)`): Deeper background stop for long-scroll atmosphere.
 - **Instrument Surface** (`oklch(0.2 0.025 242 / 0.9)`): Standard panel background.
@@ -100,6 +103,7 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 - **Button Ink** (`oklch(0.2 0.02 225)`): Text on the mint call-to-action.
 
 ### Named Rules
+
 **The Signal Discipline Rule.** Mint is not decorative wallpaper. It appears where action, state, or emphasis matters.
 
 **The Dark Surface Rule.** The page lives on dark neutrals. Light panels and white-body layouts are prohibited.
@@ -113,6 +117,7 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 **Character:** The pairing is direct and industrial. Chivo gives the site a heavy engineered voice. Source Sans 3 keeps the reading rhythm human and open enough for longer technical copy.
 
 ### Hierarchy
+
 - **Display** (900, `clamp(3.2rem, 7vw, 5.7rem)`, 0.96): Used in hero headlines and major section statements. Tight, heavy, and unmistakable.
 - **Headline** (800, `clamp(2rem, 4vw, 3.2rem)`, 1): Used for section titles and key transitions in the narrative.
 - **Title** (800, `clamp(1.5rem, 3vw, 2.2rem)`, 1.04): Used inside panels, case study entries, and architecture modules.
@@ -120,6 +125,7 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 - **Label** (600, `0.95rem`, 1.4): Used for intro lines, short metadata, and navigational text.
 
 ### Named Rules
+
 **The Weight Contrast Rule.** Headings are allowed to be heavy because the body copy is calm. Never flatten the page into one typographic weight band.
 
 **The No Costume Mono Rule.** Monospace belongs in code, system cues, and console motifs. It does not become the brand voice for general copy.
@@ -129,42 +135,50 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 Depth comes from dark layering, subtle borders, and strong shadow containment. The system is not flat, but it is also not glossy. Panels feel seated into the page like technical instruments, not floating marketing cards.
 
 ### Shadow Vocabulary
+
 - **Panel Shadow** (`0 24px 64px rgba(0, 0, 0, 0.34)`): Used for major surfaces, feature panels, and dropdowns.
 - **Action Shadow** (`0 16px 36px rgba(0, 0, 0, 0.18)`): Used for the primary button and other compressed interactive highlights.
 
 ### Named Rules
+
 **The Dark Depth Rule.** Elevation is expressed through darkness and controlled shadow weight, not through bright glows or frosted glass effects.
 
 ## 5. Components
 
 ### Buttons
+
 - **Shape:** Full-pill for primary and secondary action (`999px`).
 - **Primary:** Mint fill with dark ink text, bold display-family weight, and soft lift on hover.
 - **Hover / Focus:** The mint deepens and the button lifts slightly. Motion is short and direct.
 - **Secondary:** Transparent dark surface with a faint border and no fake depth tricks.
 
 ### Navigation
+
 - **Desktop:** Compact text links with a pill active state and a clear mint action on the right.
 - **Mobile:** Summary-triggered menu panel. Never rely on hidden horizontal overflow as the only way to reach links.
 - **Brand lockup:** Small geometric emblem paired with a two-line wordmark. It should feel like a system indicator, not a mascot.
 
 ### Panels and Cards
+
 - **Corner Style:** Moderately rounded (`1.5rem`) for larger surfaces and slightly tighter (`1.15rem`) for smaller controls.
 - **Background:** Dark layered neutrals with faint top-down highlight and thin cool borders.
 - **Internal Padding:** Tight enough to feel compact, never cramped.
 
 ### Inputs / Fields
+
 - **Style:** Dark field backgrounds, subtle borders, and strong text contrast.
 - **Focus:** Border sharpened with a mint focus ring.
 - **Tone:** Inputs should feel operational and serious, not playful or consumer-app soft.
 
 ### Hero Console
+
 - **Role:** A controlled technical motif that reinforces the type of engineering work on offer.
 - **Treatment:** Dark console body, faint mint edge, restrained code colors, and no novelty illustration effects.
 
 ## 6. Do's and Don'ts
 
 ### Do:
+
 - **Do** keep the site in a committed dark palette where mint acts as a signal, not a wash.
 - **Do** use first-person language that sounds like one careful engineer, not a team or a studio.
 - **Do** lead with proof of work, architecture, and system reasoning before broad service claims.
@@ -172,6 +186,7 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 - **Do** keep diagrams focused on topology and flow, not proprietary logic.
 
 ### Don't:
+
 - **Don't** use generic web-agency language, fake team framing, or bloated service menus.
 - **Don't** use stock developer imagery, fake testimonials, or SaaS-style marketing tropes that overpower the work itself.
 - **Don't** expose proprietary trading logic, formulas, thresholds, or anything that turns architecture storytelling into strategy leakage.
