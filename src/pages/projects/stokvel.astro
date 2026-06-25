@@ -1,64 +1,61 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Stokvel Society" description="Fintech platform for trust-based member contributions and payouts.">
-  <div class="hand-drawn-frame p-8 space-y-8">
-    <header class="space-y-4">
-      <h1 class="hand-drawn-heading text-3xl">Stokvel Society</h1>
-      <p class="text-gray-mid">A fintech platform for community savings and payouts, built with a trust-layer ledger that keeps member contributions accurate, auditable, and ready for distribution.</p>
-    </header>
-
-    <section class="grid lg:grid-cols-[1.4fr_1fr] gap-8 items-start">
-      <div class="space-y-6">
-        <div class="hand-drawn-figure p-6">
-          <h2 class="hand-drawn-heading text-2xl mb-4">Hero flow</h2>
-          <svg class="hero-illustration w-full h-auto" viewBox="0 0 700 380" aria-hidden="true">
-            <defs>
-              <filter id="sketch" x="-10%" y="-10%" width="120%" height="120%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
-              </filter>
-            </defs>
-            <rect x="40" y="60" width="180" height="120" rx="24" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8 8" filter="url(#sketch)"/>
-            <text x="130" y="95" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="currentColor">Member</text>
-            <text x="130" y="120" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" fill="currentColor">Contributions</text>
-
-            <rect x="260" y="200" width="180" height="120" rx="24" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8 8" filter="url(#sketch)"/>
-            <text x="350" y="235" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="currentColor">Trust</text>
-            <text x="350" y="260" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" fill="currentColor">Ledger</text>
-
-            <rect x="520" y="60" width="140" height="120" rx="24" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="8 8" filter="url(#sketch)"/>
-            <text x="590" y="95" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" fill="currentColor">Payouts</text>
-            <text x="590" y="120" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" fill="currentColor">Distribution</text>
-
-            <path d="M 160 180 C 210 180 240 190 265 200" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 6" />
-            <path d="M 445 200 C 495 200 525 180 555 160" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 6" />
-            <path d="M 600 100 C 470 130 390 145 350 145" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 6" />
-          </svg>
-          <p class="text-sm text-gray-mid mt-4">Illustrated flow from member contributions to ledger validation and payout distribution.</p>
-        </div>
-
-        <div class="space-y-4">
-          <h2 class="hand-drawn-heading text-2xl">Why it matters</h2>
-          <p class="text-gray-mid">Stokvel Society is designed for community trust. The platform records commitments clearly, keeps audit trails visible, and makes payouts predictable rather than manual.</p>
-        </div>
+<BaseLayout title="Stokvel Society" description="A fintech product designed around contribution clarity, ledger trust, and payout visibility.">
+  <section class="page-section">
+    <div class="container page-hero-layout">
+      <div class="section-head">
+        <div class="page-intro">Community finance</div>
+        <h1 class="page-title">Stokvel Society</h1>
+        <p class="page-copy">
+          Stokvel Society is a fintech platform for member contributions and payouts. The important thing is not simply moving money through software. It is keeping the logic legible enough for people to trust what they are seeing.
+        </p>
       </div>
 
-      <div class="space-y-6">
-        <div class="hand-drawn-card">
-          <h3 class="font-mono text-xl mb-3">Key strengths</h3>
-          <ul class="list-disc pl-6 space-y-3 text-gray-mid">
-            <li>Trusted ledger for member savings and payouts</li>
-            <li>Transparent contribution tracking across each cycle</li>
-            <li>Reliable distribution logic for payouts and audits</li>
+      <div class="availability-card">
+        <small>Primary challenge</small>
+        <strong>Financial clarity for non-technical users</strong>
+        <p>The product needed to feel calm and understandable while still reflecting serious accounting and trust responsibilities underneath.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container detail-layout">
+      <div class="diagram-panel">
+        <div class="diagram-frame">
+          <img src="/images/diagram-system/stokvel-society.svg" alt="Stokvel Society diagram showing member contributions moving into a ledger and then into payouts." />
+        </div>
+        <p class="diagram-caption">The flow is intentionally direct. Contributions move into a ledger layer and the payout path stays understandable.</p>
+      </div>
+
+      <div class="info-stack">
+        <div class="panel">
+          <div class="panel-title">What I focused on</div>
+          <ul class="bullet-list">
+            <li>Contribution tracking that stays visible across each cycle.</li>
+            <li>Payout logic that can be explained clearly to members and administrators.</li>
+            <li>Product language and UX that support trust instead of hiding behind finance jargon.</li>
           </ul>
         </div>
-
-        <div class="hand-drawn-card">
-          <h3 class="font-mono text-xl mb-3">Fit for</h3>
-          <p class="text-gray-mid">Community finance platforms, trust-based savings systems, and fintech products where correctness and clarity are essential.</p>
-        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container principle-grid">
+      <article class="principle">
+        <strong>Why it matters</strong>
+        <p>Community finance works only if the product feels dependable. The interface has to support that trust, not undermine it.</p>
+      </article>
+      <article class="principle">
+        <strong>Where the value sits</strong>
+        <p>Clear contributions, visible records, and predictable payouts are worth more than visual tricks or unnecessary feature bloat.</p>
+      </article>
+      <article class="principle">
+        <strong>What this can extend into</strong>
+        <p>The same design logic applies to other trust-heavy financial products where state, accountability, and clarity matter.</p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>

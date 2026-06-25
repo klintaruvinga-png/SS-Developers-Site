@@ -1,16 +1,71 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="How I Work" description="My process for building, hardening, and delivering high‑integrity software.">
-  <div class="hand-drawn-frame p-8">
-    <h1 class="hand-drawn-heading text-3xl mb-6">How I Work</h1>
-    <p class="mb-6 text-gray-mid">I build real systems where correctness matters. My process is transparent, iterative, and heavily automated.</p>
-    <ul class="list-disc pl-6 space-y-3 text-gray-mid">
-      <li><strong>Patch plans</strong> – define scope, acceptance criteria, and regression checklists before any code change.</li>
-      <li><strong>Incremental development</strong> – small, test‑covered commits pushed to CI.</li>
-      <li><strong>Automated QA</strong> – unit, integration, and performance tests run on every PR.</li>
-      <li><strong>AI‑assisted workflow</strong> – I use Claude, Codex, and Copilot for code generation, review, and documentation, but every suggestion is vetted by a human.</li>
-      <li><strong>Hardening focus</strong> – data‑integrity layers, staleness gates, and time‑normalization are baked into every project.</li>
-    </ul>
-  </div>
+<BaseLayout title="How I Work" description="My process for building and hardening software where correctness matters.">
+  <section class="page-section">
+    <div class="container page-hero-layout">
+      <div class="section-head">
+        <div class="page-intro">How I work</div>
+        <h1 class="page-title">I try to remove ambiguity before I remove bugs.</h1>
+        <p class="page-copy">
+          Most engineering pain starts earlier than the code. It starts when no one has agreed on the source of truth, the failure modes, or the exact problem being solved. My process is designed to force clarity before the project gets expensive.
+        </p>
+      </div>
+
+      <div class="manifest">
+        <div class="manifest-row">
+          <strong>Solo by design</strong>
+          <p>You speak directly to the person doing the architecture, implementation, and technical tradeoff decisions.</p>
+        </div>
+        <div class="manifest-row">
+          <strong>Clear boundaries</strong>
+          <p>I define what is in scope, what needs hardening, and what can wait so the work does not collapse into vagueness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="timeline">
+        <article class="timeline-item">
+          <em>Step 1</em>
+          <strong>I define the operating reality.</strong>
+          <p>I identify the people, systems, and state transitions involved before reaching for implementation detail.</p>
+        </article>
+        <article class="timeline-item">
+          <em>Step 2</em>
+          <strong>I shape the architecture around risk.</strong>
+          <p>If timing, reconciliation, or auditability can damage trust later, those concerns become first-class design inputs.</p>
+        </article>
+        <article class="timeline-item">
+          <em>Step 3</em>
+          <strong>I build in narrow increments.</strong>
+          <p>That keeps the system understandable and makes it easier to catch drift, hidden assumptions, and unnecessary complexity.</p>
+        </article>
+        <article class="timeline-item">
+          <em>Step 4</em>
+          <strong>I finish with hardening, not hand-waving.</strong>
+          <p>I care about how the product behaves when a dependency is slow, a value is stale, or an operator needs a straight answer.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container principle-grid">
+      <article class="principle">
+        <strong>Patch plans</strong>
+        <p>I define the acceptance criteria and regression concerns before a change touches production behavior.</p>
+      </article>
+      <article class="principle">
+        <strong>Automation where it helps</strong>
+        <p>I use tooling, tests, and AI assistance pragmatically, but the judgment and accountability stay human.</p>
+      </article>
+      <article class="principle">
+        <strong>Hardening focus</strong>
+        <p>Time normalization, staleness checks, and data integrity are designed into the work, not bolted on later.</p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>

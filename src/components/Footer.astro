@@ -1,11 +1,21 @@
 ---
-// Footer component – simple, matches locked design
+const year = new Date().getFullYear();
 ---
-<footer class="bg-paper/95 border-t border-silver py-8 mt-12 text-center text-sm text-gray-mid">
-  <p>&copy; {new Date().getFullYear()} SS Developers | A Munhumukapa Holdings Group Project</p>
-  <nav class="mt-4 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.18em] text-gray-mid">
-    <a href="/" class="transition hover:text-ink focus:text-ink">Home</a>
-    <a href="/projects" class="transition hover:text-ink focus:text-ink">Projects</a>
-    <a href="/contact" class="transition hover:text-ink focus:text-ink">Contact</a>
-  </nav>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="brand-name">SS Developers</div>
+      <p class="footer-copy">
+        I build trading, fintech, and data-heavy systems for teams that need the software to stay correct when the environment gets messy.
+      </p>
+      <p class="footer-copy">&copy; {year} SS Developers. Built in Cape Town.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/projects">Projects</a>
+      <a href="/architecture">Architecture</a>
+      <a href="/how-i-work">How I work</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
 </footer>

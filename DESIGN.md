@@ -1,152 +1,179 @@
 ---
 name: "SS Developers Site"
-description: "Brand‑focused informative landing site"
+description: "A dark technical portfolio for software where correctness matters"
 colors:
-  green: "#00c875" # Mint (primary)
-  green-dim: "#00a860" # Darker Mint (hover state)
-  green-pale: "#e6f9f2" # Light Mint (badge background)
-  accent-red: "#ff5f57" # Coral
-  accent-yellow: "#febc2e" # Goldenrod
-  accent-green: "#28c840" # Lime
-  ink: "#111111" # Ink
-  ink-2: "#111111" # Ink (button text)
-  ink-3: "#6b7280" # Slate (softer tone)
-  paper: "#ffffff" # Paper
-  gray-mid: "#6b7280" # Slate
-  gray-soft: "#f2f2ef" # Soft Gray
-  silver: "#e2e2de" # Silver
-  accent: "#73777f" # Stone
-rounded:
-  sm: "1.5rem"
-radius: "1.5rem"
-ease: "cubic-bezier(0.4, 0, 0.2, 1)"
-spacing:
-  sm: "8px"
-  md: "16px"
-  lg: "24px"
+  bg: "oklch(0.16 0.02 248)"
+  bg-deep: "oklch(0.13 0.02 248)"
+  surface: "oklch(0.2 0.025 242 / 0.9)"
+  surface-strong: "oklch(0.24 0.03 236 / 0.96)"
+  line: "oklch(0.39 0.04 225 / 0.6)"
+  text: "oklch(0.95 0.008 210)"
+  muted: "oklch(0.76 0.025 220)"
+  muted-strong: "oklch(0.86 0.018 215)"
+  mint: "oklch(0.8 0.17 162)"
+  mint-strong: "oklch(0.72 0.17 162)"
+  button-ink: "oklch(0.2 0.02 225)"
+  gold: "oklch(0.8 0.11 92)"
+  danger: "oklch(0.68 0.17 28)"
 typography:
   display:
-    fontFamily: "'Space Grotesk', sans-serif"
-    fontWeight: 700
-    fontSize: "clamp(2.2rem, 4.5vw, 3.4rem)"
-    lineHeight: 1.12
-    letterSpacing: "-0.03em"
+    fontFamily: "\"Chivo\", \"Arial Narrow\", sans-serif"
+    fontSize: "clamp(3.2rem, 7vw, 5.7rem)"
+    fontWeight: 900
+    lineHeight: 0.96
+    letterSpacing: "-0.035em"
   body:
-    fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
+    fontSize: "1.08rem"
     fontWeight: 400
-    fontSize: "1rem"
-    lineHeight: 1.5
+    lineHeight: 1.7
+  label:
+    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 600
+    lineHeight: 1.4
+rounded:
+  sm: "0.9rem"
+  md: "1.15rem"
+  lg: "1.5rem"
+  pill: "999px"
+spacing:
+  sm: "0.85rem"
+  md: "1.3rem"
+  lg: "1.5rem"
+components:
+  button-primary:
+    backgroundColor: "{colors.mint}"
+    textColor: "{colors.button-ink}"
+    rounded: "{rounded.pill}"
+    padding: "0.9rem 1.3rem"
+  button-secondary:
+    backgroundColor: "rgba(255, 255, 255, 0.03)"
+    textColor: "{colors.text}"
+    rounded: "{rounded.pill}"
+    padding: "0.9rem 1.3rem"
+  nav-pill:
+    backgroundColor: "rgba(255, 255, 255, 0.05)"
+    textColor: "{colors.text}"
+    rounded: "{rounded.pill}"
+    padding: "0.75rem 0.95rem"
 ---
 
 # Design System: SS Developers Site
 
 ## 1. Overview
 
-**Creative North Star:** "The Reliable Beacon"
+**Creative North Star: "The Midnight Control Room"**
 
-A confident, trustworthy, and steady visual language that guides visitors through clear information hierarchy. The design balances bold accent greens with restrained neutrals, delivering an approachable yet professional feel. **Do not** fall into generic SaaS‑metric layouts, gradient text, or side‑stripe borders greater than 1px.
+This system is designed to feel like a precise operational surface, not a generic software agency page. The mood is dark, calm, and technical. It signals that the work is serious, the thinking is deliberate, and the person behind the site understands systems that have to stay correct under pressure.
 
-### Key Characteristics:
-- **Tactile and Confident** components with solid shapes and clear hierarchy.
-- High contrast (≥4.5:1) body text on a clean white background.
-- Subtle elevation via a single soft shadow.
-- Motion limited to purposeful hover lifts and a pulse animation on badge dots.
+The design rejects startup theater. It does not use a bright white canvas, soft-beige AI minimalism, hand-drawn whimsy, or generic SaaS marketing grammar. It leads with authority, contrast, and evidence. The imagery is atmospheric and technical, but the content stays readable and grounded.
+
+**Key Characteristics:**
+- Dense visual atmosphere with restrained mint signal accents
+- Heavy display typography balanced by clear long-form reading text
+- Rounded surfaces that feel engineered rather than playful
+- Dark layered panels instead of white cards on a neutral page
+- Evidence-first structure with credibility ahead of persuasion
 
 ## 2. Colors
 
-A focused palette anchored by **Mint** (primary) with supporting accents and neutrals.
+The palette is committed and nocturnal. Mint is the signal color, not the background color. The darker neutrals carry most of the surface area so the green can retain authority.
 
 ### Primary
-- **Mint** (`#00c875`): Used for primary actions, links, and key highlights.
+- **Signal Mint** (`oklch(0.8 0.17 162)`): Primary actions, active emphasis, and short high-value highlights.
+- **Compressed Mint** (`oklch(0.72 0.17 162)`): Hover state for the primary action and stronger accent moments.
 
-### Accents
-- **Coral** (`#ff5f57`): Calls to attention, error states.
-- **Goldenrod** (`#febc2e`): Highlights, secondary emphasis.
-- **Lime** (`#28c840`): Minor accent, complementary to Mint.
+### Secondary
+- **Control Gold** (`oklch(0.8 0.11 92)`): Tiny system accents such as console markers. Never a dominant page color.
+- **Fault Red** (`oklch(0.68 0.17 28)`): Error-state accent and system warning punctuation only.
 
-### Neutrals
-- **Ink** (`#111111`): Primary text color.
-- **Paper** (`#ffffff`): Base background.
-- **Slate** (`#6b7280`): Secondary text, muted UI elements.
-- **Soft Gray** (`#f2f2ef`): Background subtleties, card surfaces.
-- **Silver** (`#e2e2de`): Border and selection highlight.
-- **Stone** (`#73777f`): Additional neutral for disabled states.
+### Neutral
+- **Night Field** (`oklch(0.16 0.02 248)`): Main page background.
+- **Lower Deck** (`oklch(0.13 0.02 248)`): Deeper background stop for long-scroll atmosphere.
+- **Instrument Surface** (`oklch(0.2 0.025 242 / 0.9)`): Standard panel background.
+- **Raised Instrument Surface** (`oklch(0.24 0.03 236 / 0.96)`): Stronger panel treatment when a module needs extra emphasis.
+- **Signal Line** (`oklch(0.39 0.04 225 / 0.6)`): Borders, separators, and low-contrast structure.
+- **Operator Text** (`oklch(0.95 0.008 210)`): High-contrast primary text.
+- **Muted Operator Text** (`oklch(0.76 0.025 220)`): Secondary text and support copy.
+- **Support Text Bright** (`oklch(0.86 0.018 215)`): Slightly brighter support copy on complex dark backgrounds.
+- **Button Ink** (`oklch(0.2 0.02 225)`): Text on the mint call-to-action.
+
+### Named Rules
+**The Signal Discipline Rule.** Mint is not decorative wallpaper. It appears where action, state, or emphasis matters.
+
+**The Dark Surface Rule.** The page lives on dark neutrals. Light panels and white-body layouts are prohibited.
 
 ## 3. Typography
 
-### Display
-- **Font:** Space Grotesk (sans‑serif)
-- **Weight:** 700 (Bold)
-- **Size:** `clamp(2.2rem, 4.5vw, 3.4rem)`
-- **Line‑height:** 1.12
-- **Letter‑spacing:** -0.03em
-- **Usage:** Hero headings, major section titles.
+**Display Font:** Chivo, Arial Narrow, sans-serif
+**Body Font:** Source Sans 3, Segoe UI, sans-serif
+**Label/Mono Font:** JetBrains Mono, SFMono-Regular, Consolas, monospace
 
-### Body
-- **Font:** Inter (system‑stack fallback)
-- **Weight:** 400 (Regular)
-- **Size:** 1rem (16px)
-- **Line‑height:** 1.5
-- **Usage:** Paragraphs, supporting copy, form labels.
+**Character:** The pairing is direct and industrial. Chivo gives the site a heavy engineered voice. Source Sans 3 keeps the reading rhythm human and open enough for longer technical copy.
+
+### Hierarchy
+- **Display** (900, `clamp(3.2rem, 7vw, 5.7rem)`, 0.96): Used in hero headlines and major section statements. Tight, heavy, and unmistakable.
+- **Headline** (800, `clamp(2rem, 4vw, 3.2rem)`, 1): Used for section titles and key transitions in the narrative.
+- **Title** (800, `clamp(1.5rem, 3vw, 2.2rem)`, 1.04): Used inside panels, case study entries, and architecture modules.
+- **Body** (400, `1.08rem`, 1.7): Used for paragraphs and explanatory text. Line length stays within readable bounds.
+- **Label** (600, `0.95rem`, 1.4): Used for intro lines, short metadata, and navigational text.
+
+### Named Rules
+**The Weight Contrast Rule.** Headings are allowed to be heavy because the body copy is calm. Never flatten the page into one typographic weight band.
+
+**The No Costume Mono Rule.** Monospace belongs in code, system cues, and console motifs. It does not become the brand voice for general copy.
 
 ## 4. Elevation
 
-A single subtle shadow provides depth without overwhelming flat design.
+Depth comes from dark layering, subtle borders, and strong shadow containment. The system is not flat, but it is also not glossy. Panels feel seated into the page like technical instruments, not floating marketing cards.
 
 ### Shadow Vocabulary
-- **Default shadow:** `0 24px 60px rgba(17, 17, 17, 0.08)` – applied to elevated cards and the code‑window component.
+- **Panel Shadow** (`0 24px 64px rgba(0, 0, 0, 0.34)`): Used for major surfaces, feature panels, and dropdowns.
+- **Action Shadow** (`0 16px 36px rgba(0, 0, 0, 0.18)`): Used for the primary button and other compressed interactive highlights.
+
+### Named Rules
+**The Dark Depth Rule.** Elevation is expressed through darkness and controlled shadow weight, not through bright glows or frosted glass effects.
 
 ## 5. Components
 
 ### Buttons
-- **Primary (`.btn-primary`):**
-  - Background: Mint (`var(--green)`).
-  - Text: Ink‑2 (`var(--ink-2)`).
-  - Border‑radius: 8px.
-  - Hover: Darker Mint (`var(--green-dim)`) with upward translate (‑2px).
-  - Padding: 14px × 28px.
-- **Secondary (`.btn-secondary`):**
-  - Background: Transparent.
-  - Text: Ink‑2.
-  - Border: 1.5px solid Silver.
-  - Hover: Border‑color upgrades to Slate, lifts ‑2px.
+- **Shape:** Full-pill for primary and secondary action (`999px`).
+- **Primary:** Mint fill with dark ink text, bold display-family weight, and soft lift on hover.
+- **Hover / Focus:** The mint deepens and the button lifts slightly. Motion is short and direct.
+- **Secondary:** Transparent dark surface with a faint border and no fake depth tricks.
 
-### Hero Badge (`.hero-badge`)
-- Background: `var(--green-pale)` (light mint).
-- Text: `var(--green-dim)`.
-- Border: 1px solid matching background.
-- Rounded pill shape (`border-radius: 100px`).
-- Includes a pulsing dot (`.hero-badge-dot`) with `animation: pulse 2s ease‑in‑out infinite`.
+### Navigation
+- **Desktop:** Compact text links with a pill active state and a clear mint action on the right.
+- **Mobile:** Summary-triggered menu panel. Never rely on hidden horizontal overflow as the only way to reach links.
+- **Brand lockup:** Small geometric emblem paired with a two-line wordmark. It should feel like a system indicator, not a mascot.
 
-### Hero Section (`.hero` & `.hero-inner`)
-- Layout: two‑column grid, gap 48px, centered content.
-- Hero heading uses the Display typeface with clamp sizing.
-- Sub‑heading (`.hero-sub`) uses body text with `var(--ink-3)` for a softer tone.
+### Panels and Cards
+- **Corner Style:** Moderately rounded (`1.5rem`) for larger surfaces and slightly tighter (`1.15rem`) for smaller controls.
+- **Background:** Dark layered neutrals with faint top-down highlight and thin cool borders.
+- **Internal Padding:** Tight enough to feel compact, never cramped.
 
-### Code Window (`.code-window`)
-- Dark background `#0d1117` with rounded corners (14px) and dual‑layer shadow.
-- Monospaced font stack, small size (0.78rem).
-- Positioned absolute within the hero visual.
+### Inputs / Fields
+- **Style:** Dark field backgrounds, subtle borders, and strong text contrast.
+- **Focus:** Border sharpened with a mint focus ring.
+- **Tone:** Inputs should feel operational and serious, not playful or consumer-app soft.
 
-### Misc
-- Global radius token (`--radius: 1.5rem`) informs any future rounded components.
-- Ease token (`--ease`) drives all transition timings.
+### Hero Console
+- **Role:** A controlled technical motif that reinforces the type of engineering work on offer.
+- **Treatment:** Dark console body, faint mint edge, restrained code colors, and no novelty illustration effects.
 
 ## 6. Do's and Don'ts
 
 ### Do:
-- **Do** use Mint as the primary accent for calls‑to‑action.
-- **Do** maintain ≥4.5:1 contrast for all body text against Paper.
-- **Do** apply the default shadow only to elevated cards and the code window.
-- **Do** keep motion purposeful: hover lifts, pulse on badge dot, no gratuitous animations.
+- **Do** keep the site in a committed dark palette where mint acts as a signal, not a wash.
+- **Do** use first-person language that sounds like one careful engineer, not a team or a studio.
+- **Do** lead with proof of work, architecture, and system reasoning before broad service claims.
+- **Do** preserve strong contrast across headings, body text, and form controls.
+- **Do** keep diagrams focused on topology and flow, not proprietary logic.
 
 ### Don't:
-- **Don't** use side‑stripe borders greater than 1 px as decorative accents.
-- **Don't** apply gradient text or glass‑morphism effects.
-- **Don't** overflow headings on narrow viewports; clamp values already guard against this.
-- **Don't** repeat identical card grids without a functional reason.
-- **Don't** employ uppercase tracked eyebrows on every section.
-
----
-
-*This DESIGN.md follows the Google Stitch specification and can be consumed by the `.impeccable/design.json` side‑car for live preview tooling.*
+- **Don't** use generic web-agency language, fake team framing, or bloated service menus.
+- **Don't** use stock developer imagery, fake testimonials, or SaaS-style marketing tropes that overpower the work itself.
+- **Don't** expose proprietary trading logic, formulas, thresholds, or anything that turns architecture storytelling into strategy leakage.
+- **Don't** bring back hand-drawn mascots, sketch filters, or whimsical cursor treatments.
+- **Don't** use gradient text, decorative side stripes, glassmorphism-by-default, or repeated tracked section eyebrows.

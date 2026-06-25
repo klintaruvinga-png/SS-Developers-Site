@@ -3,8 +3,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
 ---
 <BaseLayout title="Contact" description="Qualifying contact form for potential engagements.">
-  <div class="hand-drawn-frame p-8">
-    <h1 class="hand-drawn-heading text-3xl mb-6">Contact</h1>
-    <ContactForm />
-  </div>
+  <section class="page-section">
+    <div class="container contact-layout">
+      <div class="section-head">
+        <div class="page-intro">Contact</div>
+        <h1 class="page-title">Tell me what needs to work, not just what you want built.</h1>
+        <p class="page-copy">
+          The more clearly you describe the risk, the state that matters, and the outcomes you need, the faster I can tell you whether I am the right engineer for the job.
+        </p>
+
+        <div class="contact-stack">
+          <div class="contact-card">
+            <small>Email</small>
+            <strong>hello@ss-developers.co.za</strong>
+            <p>If you prefer email over forms, that works too.</p>
+          </div>
+          <div class="contact-card">
+            <small>Availability</small>
+            <strong>Focused project slots only</strong>
+            <p>I prefer fewer builds with clearer ownership over stacked commitments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <ContactForm />
+      </div>
+    </div>
+  </section>
 </BaseLayout>

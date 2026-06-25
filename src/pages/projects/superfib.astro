@@ -1,30 +1,62 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="SMC SuperFIB" description="Distributed‑systems solution for trading signals.">
-  <div class="hand-drawn-frame p-8 space-y-8">
-    <h1 class="hand-drawn-heading text-3xl">SMC SuperFIB</h1>
+<BaseLayout title="SMC SuperFIB" description="A distributed trading system built around one source of truth and operator clarity.">
+  <section class="page-section">
+    <div class="container page-hero-layout">
+      <div class="section-head">
+        <div class="page-intro">Trading infrastructure</div>
+        <h1 class="page-title">SMC SuperFIB</h1>
+        <p class="page-copy">
+          SuperFIB is a distributed system that synchronises indicator logic, a PHP and WordPress API, MT5 expert advisors, and a React dashboard. The design priority is not novelty. It is keeping every part aligned around one authoritative state.
+        </p>
+      </div>
 
-    <p class="text-gray-mid">A distributed‑systems solution that synchronises a Pine Script indicator, a PHP/WordPress REST API (source of truth), MT5 Expert Advisors, and a React dashboard.</p>
-
-    <figure class="hand-drawn-figure max-w-3xl mx-auto">
-      <img src="/images/diagram-system/superfib.svg"
-           alt="Hub‑and‑spoke flow: Pine Script Indicator → PHP/WordPress REST API (source of truth) ← MT5 Expert Advisors → React Dashboard."
-           class="w-full rounded-lg" />
-      <figcaption class="text-sm text-gray-mid mt-3">
-        Hub‑and‑spoke data flow – PHP/WordPress API is the central source of truth.
-      </figcaption>
-    </figure>
-
-    <div>
-      <h2 class="hand-drawn-heading text-2xl mb-4">Engineering Challenges Solved</h2>
-      <ul class="list-disc pl-6 space-y-2 text-gray-mid">
-        <li>Backend‑as‑source‑of‑truth across 3+ runtimes</li>
-        <li>Broker time normalisation (UTC+2 offset handling)</li>
-        <li>Staleness gates &amp; <code>STALE_HELD</code> blocker logic</li>
-        <li>Cross‑platform parity audits (chop‑threshold drift, HTF bias fixes)</li>
-        <li>Nearest‑minute rounding &amp; cached broker offsets to eliminate jitter</li>
-      </ul>
+      <div class="availability-card">
+        <small>Primary challenge</small>
+        <strong>Cross-runtime parity</strong>
+        <p>Different surfaces needed to agree on state, timing, and visibility without leaving operators to guess which layer was right.</p>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container detail-layout">
+      <div class="diagram-panel">
+        <div class="diagram-frame">
+          <img src="/images/diagram-system/superfib.svg" alt="SuperFIB architecture showing indicator input, a source-of-truth API, MT5 advisors, and a dashboard." />
+        </div>
+        <p class="diagram-caption">The API sits at the center so execution clients and the dashboard can reconcile against the same reality.</p>
+      </div>
+
+      <div class="info-stack">
+        <div class="panel">
+          <div class="panel-title">What I solved</div>
+          <ul class="bullet-list">
+            <li>Backend-as-source-of-truth behavior across several runtimes.</li>
+            <li>Broker time normalization and nearest-minute handling to reduce jitter.</li>
+            <li>Staleness gates and hold states so risky inputs could be blocked cleanly.</li>
+            <li>Parity audits to catch drift between indicator output, execution state, and dashboard presentation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container principle-grid">
+      <article class="principle">
+        <strong>Why the architecture mattered</strong>
+        <p>Without an authoritative backend, the different clients would eventually disagree. That is unacceptable in a trading context.</p>
+      </article>
+      <article class="principle">
+        <strong>What the user sees</strong>
+        <p>The dashboard is designed to make system state understandable quickly, not just visually appealing.</p>
+      </article>
+      <article class="principle">
+        <strong>What stays private</strong>
+        <p>I can show the topology and the hardening approach without exposing trade logic, formulas, or edge thresholds.</p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>

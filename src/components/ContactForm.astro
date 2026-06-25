@@ -1,51 +1,50 @@
 ---
-// Simple contact form using Formspree
-// The endpoint is read from the Vite env variable FORMSPREE_ENDPOINT
 const formspreeEndpoint = import.meta.env.FORMSPREE_ENDPOINT || "";
 ---
-<form
-  method="POST"
-  action={formspreeEndpoint}
-  class="max-w-xl mx-auto space-y-4"
->
-  <label class="block">
-    <span class="text-gray-mid">Name</span>
-    <input type="text" name="name" required class="mt-1 block w-full border-gray-mid rounded" />
-  </label>
+<form method="POST" action={formspreeEndpoint} class="contact-form">
+  <div class="form-grid">
+    <div class="field">
+      <label for="contact-name">Name</label>
+      <input id="contact-name" type="text" name="name" autocomplete="name" required placeholder="Your name" />
+    </div>
 
-  <label class="block">
-    <span class="text-gray-mid">Email</span>
-    <input type="email" name="email" required class="mt-1 block w-full border-gray-mid rounded" />
-  </label>
+    <div class="field">
+      <label for="contact-email">Email</label>
+      <input id="contact-email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+    </div>
 
-  <label class="block">
-    <span class="text-gray-mid">Project Type</span>
-    <select name="project_type" required class="mt-1 block w-full border-gray-mid rounded">
-      <option value="">Select…</option>
-      <option>Trading infrastructure</option>
-      <option>Fintech platform</option>
-      <option>Data‑integrity layer</option>
-      <option>Other</option>
-    </select>
-  </label>
+    <div class="field">
+      <label for="project-type">Project type</label>
+      <select id="project-type" name="project_type" required>
+        <option value="">Select a category</option>
+        <option>Trading infrastructure</option>
+        <option>Fintech product</option>
+        <option>Operations tooling</option>
+        <option>Data integrity layer</option>
+        <option>Other</option>
+      </select>
+    </div>
 
-  <label class="block">
-    <span class="text-gray-mid">Timeline</span>
-    <select name="timeline" required class="mt-1 block w-full border-gray-mid rounded">
-      <option value="">Select…</option>
-      <option>Immediate</option>
-      <option>1‑3 months</option>
-      <option>3‑6 months</option>
-      <option>More than 6 months</option>
-    </select>
-  </label>
+    <div class="field">
+      <label for="timeline">Timeline</label>
+      <select id="timeline" name="timeline" required>
+        <option value="">Choose a window</option>
+        <option>Immediate</option>
+        <option>2 to 6 weeks</option>
+        <option>1 to 3 months</option>
+        <option>3 months or more</option>
+      </select>
+    </div>
 
-  <label class="block">
-    <span class="text-gray-mid">Message</span>
-    <textarea name="message" rows="4" required class="mt-1 block w-full border-gray-mid rounded"></textarea>
-  </label>
+    <div class="field field-full">
+      <label for="message">What needs to be correct for this project to succeed?</label>
+      <textarea id="message" name="message" rows="7" required placeholder="Give me the problem, the constraints, and what cannot fail."></textarea>
+    </div>
+  </div>
 
-  <button type="submit" class="px-6 py-2 bg-accent text-white rounded hover:bg-accent/90 transition">
-    Send
-  </button>
+  <p class="form-note">
+    I read every message myself. If the work is a fit, I will reply with next steps and the information I need to scope it properly.
+  </p>
+
+  <button type="submit" class="button-primary">Send project note</button>
 </form>
