@@ -2,20 +2,44 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout title="Now" description="Current focus and hardening work.">
-  <div class="hand-drawn-frame p-8">
-    <h1 class="hand-drawn-heading text-3xl mb-6">Now</h1>
-    <ul class="list-disc pl-6 space-y-4 text-gray-mid">
-      <li><strong>Currently Building</strong>
-        <ul class="list-disc ml-6 mt-2 space-y-2">
-          <li>SuperFIB Dashboard v4 / signal board reconciliation</li>
-          <li>Stokvel Society – core features and final UI polish</li>
-        </ul>
-      </li>
-      <li><strong>Currently Hardening</strong>
-        <ul class="list-disc ml-6 mt-2 space-y-2">
-          <li>Data‑integrity layer / broker feed reliability</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <section class="page-section">
+    <div class="container page-hero-layout">
+      <div class="section-head">
+        <div class="page-intro">Now</div>
+        <h1 class="page-title">What I am building and tightening right now.</h1>
+        <p class="page-copy">
+          This page stays short on purpose. It is a snapshot of the work that currently has my attention.
+        </p>
+      </div>
+
+      <div class="manifest">
+        <div class="manifest-row">
+          <strong>Current bias</strong>
+          <p>Less noise, more systems that can be trusted under imperfect operating conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container status-list">
+      <article class="availability-card">
+        <small>Currently building</small>
+        <strong>SuperFIB dashboard v4</strong>
+        <p>Signal board reconciliation, clearer operator state, and tighter dashboard behavior around execution visibility.</p>
+      </article>
+
+      <article class="availability-card">
+        <small>Currently building</small>
+        <strong>Stokvel Society</strong>
+        <p>Core product features, stronger reporting flow, and final interface hardening around community finance clarity.</p>
+      </article>
+
+      <article class="availability-card">
+        <small>Currently hardening</small>
+        <strong>Data integrity and feed reliability</strong>
+        <p>Staleness handling, source alignment, and the boring checks that keep distributed systems from quietly drifting.</p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>

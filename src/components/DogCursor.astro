@@ -1,59 +1,118 @@
 ---
-// Hand‑drawn dog that follows the cursor and sits when the mouse stops.
 ---
-<div id="dog-cursor" class="fixed inset-0 pointer-events-none z-50 opacity-90 hidden">
-  <img src="/assets/dog.svg" alt="Hand‑drawn dog" class="w-20 h-20" />
+<div id="signal-cursor" aria-hidden="true">
+  <span class="cursor-ring"></span>
+  <span class="cursor-dot"></span>
 </div>
 
 <script>
-  const dog = document.getElementById('dog-cursor');
-  if (dog) {
-    dog.classList.remove('hidden');
-    let timeoutId = null;
-    const idleDelay = 300; // ms without movement → sit
-    const setPosition = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      dog.style.transform = `translate(${x - 40}px, ${y - 40}px)`; // centre the 80px image
-      dog.classList.remove('sitting');
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        dog.classList.add('sitting');
-      }, idleDelay);
+  const cursor = document.getElementById('signal-cursor');
+  const ring = cursor?.querySelector('.cursor-ring');
+  const dot = cursor?.querySelector('.cursor-dot');
+  const prefersFine = window.matchMedia('(pointer: fine)').matches;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (cursor && ring && dot && prefersFine && !prefersReduced) {
+    document.body.dataset.cursorReady = 'true';
+
+    let x = window.innerWidth / 2;
+    let y = window.innerHeight / 2;
+    let ringX = x;
+    let ringY = y;
+    let active = false;
+
+    const hoverSelector = 'a, button, input, textarea, select, [data-cursor="focus"]';
+
+    const render = () => {
+      ringX += (x - ringX) * 0.16;
+      ringY += (y - ringY) * 0.16;
+      dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) scale(${active ? 1.55 : 1})`;
+      requestAnimationFrame(render);
     };
-    window.addEventListener('mousemove', setPosition);
+
+    const setPointer = (event) => {
+      x = event.clientX;
+      y = event.clientY;
+      cursor.classList.add('visible');
+    };
+
+    const setActive = (state) => {
+      active = state;
+      cursor.classList.toggle('active', state);
+    };
+
+    window.addEventListener('mousemove', setPointer);
+    window.addEventListener('mousedown', () => setActive(true));
+    window.addEventListener('mouseup', () => setActive(false));
+    document.addEventListener('mouseover', (event) => {
+      setActive(Boolean(event.target.closest(hoverSelector)));
+    });
+    document.addEventListener('mouseout', (event) => {
+      if (event.target.closest(hoverSelector)) {
+        setActive(false);
+      }
+    });
+
+    render();
   }
 </script>
 
 <style>
-  #dog-cursor {
+  #signal-cursor {
+    position: fixed;
+    inset: 0;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 40;
+    opacity: 0;
+    transition: opacity 160ms ease-out;
+  }
+
+  #signal-cursor.visible {
+    opacity: 1;
+  }
+
+  .cursor-ring,
+  .cursor-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 999px;
+    transform: translate3d(-100px, -100px, 0);
     will-change: transform;
   }
 
-  #dog-cursor img {
-    width: 5rem;
-    height: auto;
-    transform-origin: center center;
-    transition: transform 0.18s ease-out, filter 0.18s ease-out;
-    filter: drop-shadow(0 10px 20px rgba(17, 17, 17, 0.12));
+  .cursor-ring {
+    width: 2rem;
+    height: 2rem;
+    margin: -1rem 0 0 -1rem;
+    border: 1px solid rgba(0, 200, 117, 0.62);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 0 20px rgba(0, 200, 117, 0.18);
+    background: rgba(0, 200, 117, 0.05);
+    transition:
+      transform 160ms ease-out,
+      border-color 160ms ease-out,
+      background-color 160ms ease-out;
   }
 
-  #dog-cursor.sitting img {
-    transform: translateY(8px) rotate(6deg) scale(0.96);
+  .cursor-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: -0.225rem 0 0 -0.225rem;
+    background: #f2fff8;
+    box-shadow: 0 0 18px rgba(0, 200, 117, 0.48);
   }
 
-  #dog-cursor.motion img {
-    animation: wag 1.2s ease-in-out infinite;
+  #signal-cursor.active .cursor-ring {
+    border-color: rgba(242, 255, 248, 0.82);
+    background: rgba(0, 200, 117, 0.14);
   }
 
-  @keyframes wag {
-    0%, 100% {
-      transform: translateY(0px) rotate(-1deg);
-    }
-    50% {
-      transform: translateY(-1px) rotate(2deg);
+  @media (pointer: coarse), (max-width: 960px), (prefers-reduced-motion: reduce) {
+    #signal-cursor {
+      display: none;
     }
   }
 </style>

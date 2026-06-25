@@ -1,11 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Work With Me" description="Fit/no‑fit statement and clear call to action.">
-  <div class="hand-drawn-frame p-8">
-    <h1 class="hand-drawn-heading text-3xl mb-6">Work With Me</h1>
-    <p class="mb-4 text-gray-mid">I take on engagements that require deep engineering – trading infrastructure, fintech platforms, multi‑platform data‑integrity layers, and any system where correctness matters.</p>
-    <p class="mb-6 text-gray-mid"><strong>Does NOT fit:</strong> simple brochure sites, generic marketing pages, or projects outside the engineering depth described above.</p>
-    <a href="/contact" class="hand-drawn-cta">Get in Touch</a>
-  </div>
+<BaseLayout title="Work With Me" description="The kind of engineering work I take on and what is not a fit.">
+  <section class="page-section">
+    <div class="container page-hero-layout">
+      <div class="section-head">
+        <div class="page-intro">Work with me</div>
+        <h1 class="page-title">The fit is strongest when correctness matters.</h1>
+        <p class="page-copy">
+          I do my best work on systems that need careful architecture, readable state, and a builder who can carry the work from framing through hardening.
+        </p>
+      </div>
+
+      <div class="availability-card">
+        <small>Best fit</small>
+        <strong>Deep engineering, not broad volume work</strong>
+        <p>I prefer focused projects where the technical decisions have real consequences for trust, money, or operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container fit-grid">
+      <article class="principle">
+        <strong>Strong fit</strong>
+        <ul class="fit-list">
+          <li>Trading infrastructure and operator tooling</li>
+          <li>Fintech products with ledger or payout complexity</li>
+          <li>Cross-platform systems that need one reliable source of truth</li>
+          <li>Existing products that need cleanup, stabilization, or architectural repair</li>
+        </ul>
+      </article>
+
+      <article class="principle">
+        <strong>Possible fit</strong>
+        <ul class="fit-list">
+          <li>Product surfaces that support a deeper internal system</li>
+          <li>Dashboards that need both technical clarity and strong presentation</li>
+          <li>Automation and internal tools where process drift is hurting the team</li>
+        </ul>
+      </article>
+
+      <article class="principle">
+        <strong>Not a fit</strong>
+        <ul class="fit-list">
+          <li>Generic brochure sites with no deeper engineering need</li>
+          <li>High-volume content work with little technical involvement</li>
+          <li>Projects that need a large retained team rather than a hands-on solo engineer</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <a href="/contact" class="button-primary">Start the conversation</a>
+    </div>
+  </section>
 </BaseLayout>

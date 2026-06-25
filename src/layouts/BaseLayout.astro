@@ -6,18 +6,20 @@ import '../styles/global.css';
 
 const { title, description } = Astro.props;
 ---
-<html lang="en" class="bg-paper text-ink font-sans">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <!-- Open Graph tags can be added via front‑matter -->
+    <meta name="theme-color" content="#071018" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body>
     <Nav />
     <DogCursor />
-    <main class="flex-1 container mx-auto px-4 py-8">
+    <main class="site-main">
       <slot />
     </main>
     <Footer />
