@@ -234,6 +234,6 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 - **Don't** use generic web-agency language, fake team framing, or bloated service menus.
 - **Don't** use stock developer imagery, fake testimonials, or SaaS-style marketing tropes that overpower the work itself.
 - **Don't** expose proprietary trading logic, formulas, thresholds, or anything that turns architecture storytelling into strategy leakage.
-- **Don't** bring back hand-drawn mascots, sketch filters, or whimsical cursor treatments.
+- **Don't** bring back hand-drawn mascots, sketch filters, or whimsical cursor treatments. (The current signal-based cursor treatment with mint accent is permitted as it reinforces the technical control room aesthetic and respects user motion preferences.)
 - **Don't** use gradient text, decorative side stripes, glassmorphism-by-default, or repeated tracked section eyebrows.
 - **Don't** crop the homepage hero so tightly that the technical object turns into an unrecognizable abstract panel.
