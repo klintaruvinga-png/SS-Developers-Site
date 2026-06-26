@@ -133,11 +133,11 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 
 ### Hierarchy
 
-- **Display** (900, `clamp(3.2rem, 7vw, 5.7rem)`, 0.96): Used in hero headlines and major section statements. Tight, heavy, and unmistakable.
-- **Headline** (800, `clamp(2rem, 4vw, 3.2rem)`, 1): Used for section titles and key transitions in the narrative.
-- **Title** (800, `clamp(1.5rem, 3vw, 2.2rem)`, 1.04): Used inside panels, case study entries, and architecture modules.
-- **Body** (400, `1.08rem`, 1.7): Used for paragraphs and explanatory text. Line length stays within readable bounds.
-- **Label** (600, `0.95rem`, 1.4): Used for intro lines, short metadata, and navigational text.
+- **Display** (900, `clamp(2.6rem, 4vw, 3.4rem)`, `0.96`): Used in hero headlines and major section statements. Tight, heavy, and unmistakable, but smaller than the older studio-scale display.
+- **Headline** (800, `clamp(2.15rem, 3.8vw, 3.45rem)`, `0.98`): Used for section titles and key transitions in the narrative.
+- **Title** (800, `clamp(1.55rem, 2.8vw, 2.35rem)`, `1.04`): Used inside panels, case study entries, and architecture modules.
+- **Body** (400, `1.12rem`, `1.76`): Used for paragraphs and explanatory text. Line length stays within readable bounds and breathes a little more on the dark surface.
+- **Label** (600, `0.95rem`, `1.4`): Used for intro lines, short metadata, and navigational text.
 
 ### Named Rules
 
