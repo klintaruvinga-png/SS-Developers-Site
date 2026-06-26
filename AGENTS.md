@@ -33,6 +33,10 @@ This repository is a static Astro portfolio site for a solo engineering practice
 - Preserve the site’s minimal design language and restrained accent usage.
 - Follow an 8px base spacing system with 4px increments. Prefer the shared spacing tokens in `src/styles/global.css` over one-off spacing values.
 - Do not add runtime backend dependencies or server-side features unless explicitly required by the project vision.
+- Treat the homepage hero as an image-led proof surface, not a split marketing block: text rides on the left-side negative space and the technical artifact stays visible on the right.
+- When adjusting the homepage hero image, avoid over-zooming. Keep enough of the tablet and stand visible that the image still reads as a real object, not an abstract crop.
+- On desktop and other wide screens, prefer widening the hero text measure before letting the headline stack into too many short lines.
+- Personality should stay slightly austere and controlled. Avoid hype, breathless “premium” language, and friendly-studio warmth that makes the site sound less exact.
 
 ## Documentation references
 - `PRD.md` — project vision, positioning, launch scope, and diagram safety rules
@@ -46,6 +50,7 @@ This repository is a static Astro portfolio site for a solo engineering practice
 - `lighthouse` and `http-server` appear present for manual audits and previewing production output.
 - The production build is static; changes should be validated via `astro build` and browser preview.
 - If modifying contact behavior, preserve the static form approach and the environment-based Formspree endpoint.
+- If a design change introduces a stronger visual decision, write the durable rationale back into `AGENTS.md`, `DESIGN.md`, or `.impeccable/design.json` so the next pass preserves it instead of rediscovering it.
 
 ---
 

@@ -145,6 +145,8 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 
 **The No Costume Mono Rule.** Monospace belongs in code, system cues, and console motifs. It does not become the brand voice for general copy.
 
+**The Wide Hero Rule.** On desktop, let the homepage hero headline spread horizontally before stacking it into a tall block. The first move is a wider measure, not a larger font.
+
 ## 4. Spacing & Rhythm
 
 The site uses an 8px base spacing system, with all intermediate steps moving in 4px increments. That means the layout can tighten or open up without introducing visual drift. Shared spacing tokens in `src/styles/global.css` are the source of truth; ad hoc values should be treated as defects unless there is a strong optical reason.
@@ -208,7 +210,8 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 ### Hero Visual
 
 - **Role:** A single atmospheric system surface that supports the headline without overpowering it.
-- **Treatment:** Inset crop, restrained overlay, and enough breathing room that the image feels framed rather than oversized.
+- **Treatment:** Use a wide technical render with left-side negative space for overlaid copy, a restrained dark scrim, and a crop that keeps enough of the device and stand visible to read as a real artifact rather than an abstract texture.
+- **Homepage bias:** The strongest home hero image should feel like a photographed product surface or technical object, not stock “developer” imagery and not a zoomed-in glow field.
 
 ### Heading Emphasis
 
@@ -224,11 +227,13 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 - **Do** lead with proof of work, architecture, and system reasoning before broad service claims.
 - **Do** preserve strong contrast across headings, body text, and form controls.
 - **Do** keep diagrams focused on topology and flow, not proprietary logic.
+- **Do** preserve left-side negative space and visible device detail in the homepage hero when swapping or reframing the hero image.
 
 ### Don't:
 
 - **Don't** use generic web-agency language, fake team framing, or bloated service menus.
 - **Don't** use stock developer imagery, fake testimonials, or SaaS-style marketing tropes that overpower the work itself.
 - **Don't** expose proprietary trading logic, formulas, thresholds, or anything that turns architecture storytelling into strategy leakage.
-- **Don't** bring back hand-drawn mascots, sketch filters, or whimsical cursor treatments.
+- **Don't** bring back hand-drawn mascots, sketch filters, or whimsical cursor treatments. (The current signal-based cursor treatment with mint accent is permitted as it reinforces the technical control room aesthetic and respects user motion preferences.)
 - **Don't** use gradient text, decorative side stripes, glassmorphism-by-default, or repeated tracked section eyebrows.
+- **Don't** crop the homepage hero so tightly that the technical object turns into an unrecognizable abstract panel.
