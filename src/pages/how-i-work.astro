@@ -1,14 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="How I Work" description="My process for building and hardening software where correctness matters.">
+<BaseLayout title="How I Work | SS Developers" description="My process for building digital products and specialist systems with clear scope, visible risk, and dependable delivery from discovery through hardening.">
   <section class="page-section">
     <div class="container page-hero-layout">
       <div class="section-head">
         <div class="page-intro">How I work</div>
-        <h1 class="page-title">I try to remove ambiguity before I remove bugs.</h1>
+        <h1 class="page-title">I make the shape of the work clear before the build gets expensive.</h1>
         <p class="page-copy">
-          Most engineering pain starts earlier than the code. It starts when no one has agreed on the source of truth, the failure modes, or the exact problem being solved. My process is designed to force clarity before the project gets expensive.
+          Most engineering pain starts earlier than the code. It starts when scope is vague, risks are hidden, or no one has agreed on what actually needs to work. My process is designed to make those things visible early.
         </p>
       </div>
 
@@ -30,22 +30,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="timeline">
         <article class="timeline-item">
           <em>Step 1</em>
-          <strong>I define the operating reality.</strong>
+          <strong>We agree on exactly what needs to work.</strong>
           <p>I identify the people, systems, and state transitions involved before reaching for implementation detail.</p>
         </article>
         <article class="timeline-item">
           <em>Step 2</em>
-          <strong>I shape the architecture around risk.</strong>
+          <strong>I design the system around where things could go wrong.</strong>
           <p>If timing, reconciliation, or auditability can damage trust later, those concerns become first-class design inputs.</p>
         </article>
         <article class="timeline-item">
           <em>Step 3</em>
-          <strong>I build in narrow increments.</strong>
+          <strong>I ship in small, visible pieces so you're never in the dark.</strong>
           <p>That keeps the system understandable and makes it easier to catch drift, hidden assumptions, and unnecessary complexity.</p>
         </article>
         <article class="timeline-item">
           <em>Step 4</em>
-          <strong>I finish with hardening, not hand-waving.</strong>
+          <strong>I finish by testing the hard edges, not just the happy path.</strong>
           <p>I care about how the product behaves when a dependency is slow, a value is stale, or an operator needs a straight answer.</p>
         </article>
       </div>
@@ -53,19 +53,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="page-section">
-    <div class="container principle-grid">
-      <article class="principle">
-        <strong>Patch plans</strong>
-        <p>I define the acceptance criteria and regression concerns before a change touches production behavior.</p>
-      </article>
-      <article class="principle">
-        <strong>Automation where it helps</strong>
-        <p>I use tooling, tests, and AI assistance pragmatically, but the judgment and accountability stay human.</p>
-      </article>
-      <article class="principle">
-        <strong>Hardening focus</strong>
-        <p>Time normalization, staleness checks, and data integrity are designed into the work, not bolted on later.</p>
-      </article>
+    <div class="container">
+      <div class="section-head">
+        <div class="page-intro">Engineering stance</div>
+        <h2 class="section-title">The system still needs to make sense when the easy path breaks.</h2>
+        <p class="section-copy">
+          These are the ideas underneath the process. They are how I keep a build readable, dependable, and easier to recover when something goes sideways.
+        </p>
+      </div>
+
+      <div class="principle-grid">
+        <article class="principle">
+          <strong>One source of truth</strong>
+          <p>When several tools touch the same state, I establish authority early so the system can reconcile instead of arguing with itself.</p>
+        </article>
+        <article class="principle">
+          <strong>Operator readability</strong>
+          <p>I expose the information that matters to the person running the system, not just the person who built it.</p>
+        </article>
+        <article class="principle">
+          <strong>Recoverable behavior</strong>
+          <p>Failures should produce understandable states and reasonable next actions, not mystery or panic.</p>
+        </article>
+      </div>
     </div>
   </section>
 </BaseLayout>

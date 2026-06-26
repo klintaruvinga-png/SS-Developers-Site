@@ -14,49 +14,63 @@ colors:
   mint-strong: "oklch(0.72 0.17 162)"
   button-ink: "oklch(0.2 0.02 225)"
   gold: "oklch(0.8 0.11 92)"
+  gold-strong: "oklch(0.72 0.12 84)"
   danger: "oklch(0.68 0.17 28)"
 typography:
   display:
     fontFamily: "\"Chivo\", \"Arial Narrow\", sans-serif"
-    fontSize: "clamp(3.2rem, 7vw, 5.7rem)"
+    fontSize: "clamp(2.6rem, 4vw, 3.4rem)"
     fontWeight: 900
     lineHeight: 0.96
-    letterSpacing: "-0.035em"
+    letterSpacing: "-0.03em"
   body:
     fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
-    fontSize: "1.08rem"
+    fontSize: "1.12rem"
     fontWeight: 400
-    lineHeight: 1.7
+    lineHeight: 1.76
   label:
     fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
     fontSize: "0.95rem"
     fontWeight: 600
     lineHeight: 1.4
 rounded:
-  sm: "0.9rem"
-  md: "1.15rem"
+  button: "5px"
+  sm: "1rem"
+  md: "1.25rem"
   lg: "1.5rem"
   pill: "999px"
 spacing:
-  sm: "0.85rem"
-  md: "1.3rem"
-  lg: "1.5rem"
+  rule: "8px base unit with 4px increments"
+  scale:
+    step-1: "0.25rem"
+    step-2: "0.5rem"
+    step-3: "0.75rem"
+    step-4: "1rem"
+    step-5: "1.25rem"
+    step-6: "1.5rem"
+    step-7: "1.75rem"
+    step-8: "2rem"
+    step-9: "2.5rem"
+    step-10: "3rem"
+    step-12: "4rem"
+    step-14: "5rem"
+    step-16: "6rem"
 components:
   button-primary:
     backgroundColor: "{colors.mint}"
     textColor: "{colors.button-ink}"
-    rounded: "{rounded.pill}"
-    padding: "0.9rem 1.3rem"
+    rounded: "{rounded.button}"
+    padding: "1rem 1.5625rem"
   button-secondary:
     backgroundColor: "rgba(255, 255, 255, 0.03)"
     textColor: "{colors.text}"
-    rounded: "{rounded.pill}"
-    padding: "0.9rem 1.3rem"
+    rounded: "{rounded.button}"
+    padding: "1rem 1.5625rem"
   nav-pill:
     backgroundColor: "rgba(255, 255, 255, 0.05)"
     textColor: "{colors.text}"
     rounded: "{rounded.pill}"
-    padding: "0.75rem 0.95rem"
+    padding: "0.75rem 1rem"
 ---
 
 # Design System: SS Developers Site
@@ -87,7 +101,8 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 
 ### Secondary
 
-- **Control Gold** (`oklch(0.8 0.11 92)`): Tiny system accents such as console markers. Never a dominant page color.
+- **Control Gold** (`oklch(0.8 0.11 92)`): Secondary accent for heading emphasis, highlighted links, and warm signal moments.
+- **Burnished Gold** (`oklch(0.72 0.12 84)`): Slightly deeper gold used where the accent needs more weight against dark surfaces.
 - **Fault Red** (`oklch(0.68 0.17 28)`): Error-state accent and system warning punctuation only.
 
 ### Neutral
@@ -118,11 +133,11 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 
 ### Hierarchy
 
-- **Display** (900, `clamp(3.2rem, 7vw, 5.7rem)`, 0.96): Used in hero headlines and major section statements. Tight, heavy, and unmistakable.
-- **Headline** (800, `clamp(2rem, 4vw, 3.2rem)`, 1): Used for section titles and key transitions in the narrative.
-- **Title** (800, `clamp(1.5rem, 3vw, 2.2rem)`, 1.04): Used inside panels, case study entries, and architecture modules.
-- **Body** (400, `1.08rem`, 1.7): Used for paragraphs and explanatory text. Line length stays within readable bounds.
-- **Label** (600, `0.95rem`, 1.4): Used for intro lines, short metadata, and navigational text.
+- **Display** (900, `clamp(2.6rem, 4vw, 3.4rem)`, `0.96`): Used in hero headlines and major section statements. Tight, heavy, and unmistakable, but smaller than the older studio-scale display.
+- **Headline** (800, `clamp(2.15rem, 3.8vw, 3.45rem)`, `0.98`): Used for section titles and key transitions in the narrative.
+- **Title** (800, `clamp(1.55rem, 2.8vw, 2.35rem)`, `1.04`): Used inside panels, case study entries, and architecture modules.
+- **Body** (400, `1.12rem`, `1.76`): Used for paragraphs and explanatory text. Line length stays within readable bounds and breathes a little more on the dark surface.
+- **Label** (600, `0.95rem`, `1.4`): Used for intro lines, short metadata, and navigational text.
 
 ### Named Rules
 
@@ -130,7 +145,27 @@ The palette is committed and nocturnal. Mint is the signal color, not the backgr
 
 **The No Costume Mono Rule.** Monospace belongs in code, system cues, and console motifs. It does not become the brand voice for general copy.
 
-## 4. Elevation
+## 4. Spacing & Rhythm
+
+The site uses an 8px base spacing system, with all intermediate steps moving in 4px increments. That means the layout can tighten or open up without introducing visual drift. Shared spacing tokens in `src/styles/global.css` are the source of truth; ad hoc values should be treated as defects unless there is a strong optical reason.
+
+### Scale
+
+- **Step 1** (`0.25rem / 4px`): Hairline adjacency, dot offsets, and very tight internal spacing.
+- **Step 2** (`0.5rem / 8px`): Small label spacing and compact inline groupings.
+- **Step 3** (`0.75rem / 12px`): Tight control padding and small stacked relationships.
+- **Step 4** (`1rem / 16px`): Default control padding and standard internal spacing.
+- **Step 5** (`1.25rem / 20px`): Medium component padding and compact layout separation.
+- **Step 6** (`1.5rem / 24px`): Standard card padding and stronger section internals.
+- **Step 8** (`2rem / 32px`) and above: Grid gaps, section spacing, and viewport-scale rhythm.
+
+### Named Rules
+
+**The Shared-Token Rule.** If spacing is reused, it should be a token, not a fresh number.
+
+**The 4px Escape Hatch Rule.** When the default 8px cadence feels too loose or too tight, adjust by 4px, not by arbitrary decimals.
+
+## 5. Elevation
 
 Depth comes from dark layering, subtle borders, and strong shadow containment. The system is not flat, but it is also not glossy. Panels feel seated into the page like technical instruments, not floating marketing cards.
 
@@ -143,11 +178,11 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 
 **The Dark Depth Rule.** Elevation is expressed through darkness and controlled shadow weight, not through bright glows or frosted glass effects.
 
-## 5. Components
+## 6. Components
 
 ### Buttons
 
-- **Shape:** Full-pill for primary and secondary action (`999px`).
+- **Shape:** Primary and secondary actions use a tighter `5px` corner radius with wider horizontal padding. Pill treatment is reserved for nav chips and small status surfaces.
 - **Primary:** Mint fill with dark ink text, bold display-family weight, and soft lift on hover.
 - **Hover / Focus:** The mint deepens and the button lifts slightly. Motion is short and direct.
 - **Secondary:** Transparent dark surface with a faint border and no fake depth tricks.
@@ -156,7 +191,7 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 
 - **Desktop:** Compact text links with a pill active state and a clear mint action on the right.
 - **Mobile:** Summary-triggered menu panel. Never rely on hidden horizontal overflow as the only way to reach links.
-- **Brand lockup:** Small geometric emblem paired with a two-line wordmark. It should feel like a system indicator, not a mascot.
+- **Brand lockup:** A compact mark image that reads clearly in the sticky nav without turning the header into a logo showcase.
 
 ### Panels and Cards
 
@@ -170,12 +205,17 @@ Depth comes from dark layering, subtle borders, and strong shadow containment. T
 - **Focus:** Border sharpened with a mint focus ring.
 - **Tone:** Inputs should feel operational and serious, not playful or consumer-app soft.
 
-### Hero Console
+### Hero Visual
 
-- **Role:** A controlled technical motif that reinforces the type of engineering work on offer.
-- **Treatment:** Dark console body, faint mint edge, restrained code colors, and no novelty illustration effects.
+- **Role:** A single atmospheric system surface that supports the headline without overpowering it.
+- **Treatment:** Inset crop, restrained overlay, and enough breathing room that the image feels framed rather than oversized.
 
-## 6. Do's and Don'ts
+### Heading Emphasis
+
+- **Section titles and project titles:** Use the gold accent as an underline where the heading needs extra weight or a clearer anchor in the scan path.
+- **Role:** The gold underline marks emphasis without turning the page into a second mint system.
+
+## 7. Do's and Don'ts
 
 ### Do:
 

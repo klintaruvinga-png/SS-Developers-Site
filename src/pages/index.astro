@@ -1,234 +1,156 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="SS Developers | Software built for real conditions" description="I build trading, fintech, and data-heavy software that stays correct when the inputs are messy and the stakes are real.">
+<BaseLayout title="SS Developers | Cape Town Web Developer for Websites, Apps, and Software" description="I build digital products, internal tools, trading systems, and fintech software for teams that need dependable engineering and clear technical ownership.">
   <section class="hero-section">
     <div class="container hero-layout">
-      <div class="stack-lg">
-        <div class="section-label">Open for focused engineering work</div>
-        <h1 class="hero-title">I build systems that <span class="accent">hold up under real load.</span></h1>
+      <div class="hero-text stack-lg" data-reveal style="--reveal-delay: 40ms;">
+        <div class="hero-kicker">
+          <span class="hero-kicker-dot" aria-hidden="true"></span>
+          <span>Open for focused work</span>
+        </div>
+        <h1 class="hero-title">I build <span class="accent">digital products and custom systems</span> for growth, impact, and stability.</h1>
         <p class="hero-copy">
-          I work on trading infrastructure, fintech products, automation, and data integrity layers. The common requirement is the same every time: the software has to stay correct when timing, state, and human trust are all under pressure.
+          I build product sites, web applications, internal tools, and specialist systems where the user experience and the engineering both matter.
+          The work is about more than polish: it is about systems that stay reliable as usage grows, data changes, and teams hand the product off.
+          That means tighter technical ownership, clearer product behaviour, and code that does not drift once it is live.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="button-primary">Start a project</a>
-          <a href="/projects" class="button-secondary">Read the case studies</a>
-        </div>
-
-        <div class="hero-signal-list" role="group" aria-label="What I focus on">
-          <div class="hero-signal">Execution flows that reconcile cleanly across multiple runtimes and user surfaces.</div>
-          <div class="hero-signal">Operator tooling that exposes system state clearly instead of hiding it behind polish.</div>
-          <div class="hero-signal">Architectures built around one source of truth, predictable recovery paths, and readable audits.</div>
+          <a href="/projects" class="button-primary">See my work</a>
+          <a href="/contact" class="button-secondary">Start Your Project</a>
         </div>
       </div>
 
-      <div class="hero-visual surface-frame" aria-hidden="true">
-        <img src="/images/redesign/tech-backdrop.png" alt="" class="hero-image" />
+      <div class="hero-visual" aria-hidden="true" data-reveal style="--reveal-delay: 120ms;">
+        <img src="/images/redesign/hero-system-surface.png" alt="" class="hero-image" />
         <div class="hero-overlay"></div>
-
-        <div class="hero-notes">
-          <div class="visual-note">
-            <strong>6 years in production work</strong>
-            <span>Web, mobile, fintech, automation, and cross-system architecture.</span>
-          </div>
-          <div class="visual-note">
-            <strong>20 plus shipped builds</strong>
-            <span>From landing surfaces to systems where state drift costs money and trust.</span>
-          </div>
-        </div>
-
-        <div class="hero-console">
-          <div class="console-bar">
-            <span class="console-dot red"></span>
-            <span class="console-dot yellow"></span>
-            <span class="console-dot green"></span>
-            <span class="console-title">ss-dev / system-check.ts</span>
-          </div>
-          <pre class="console-body"><code><span class="code-comment">// The contract is clear before the build starts.</span>
-<span class="code-key">const</span> constraints = [
-  <span class="code-value">'single source of truth'</span>,
-  <span class="code-value">'readable operator state'</span>,
-  <span class="code-value">'recovery paths that make sense'</span>,
-];
-
-<span class="code-key">const</span> result = <span class="code-value">'software that behaves in the real world'</span>;</code></pre>
-        </div>
       </div>
     </div>
   </section>
 
   <section class="page-section">
     <div class="container content-split">
-      <div class="section-head">
-        <div class="page-intro">What I actually build</div>
-        <h2 class="section-title">Proof first, then polish.</h2>
-        <p class="section-copy">
-          I am not selling a broad agency menu. The work is specific. It usually involves systems that sync across tools, teams, or platforms and break trust quickly if the data goes stale.
-        </p>
+      <div class="visual-panel visual-panel-light" data-reveal>
+        <img
+          src="/images/redesign/exercise-app-tablet-light.png"
+          alt="Light-themed exercise learning app shown on a sleek tablet."
+          class="visual-panel-image visual-panel-image-contain"
+        />
       </div>
 
-      <div class="manifest">
-        <div class="manifest-row">
-          <strong>Trading and signal infrastructure</strong>
-          <p>Execution paths, reconciliation logic, dashboards, and source-of-truth layers that stay aligned across runtimes.</p>
+      <div class="section-panel" data-reveal style="--reveal-delay: 60ms;">
+        <div class="section-head">
+          <div class="page-intro">How the work starts</div>
+          <h2 class="section-title">Education interfaces that hold attention and <span class="accent">stay dependable.</span></h2>
         </div>
-        <div class="manifest-row">
-          <strong>Fintech and trust systems</strong>
-          <p>Products where contributions, payouts, balances, and auditability need to stay boringly correct.</p>
+        <p class="section-copy">
+          A calm product surface only works when the state underneath it is trustworthy. I start by defining what the user needs to see clearly, what can drift, and what the system has to keep true without asking the team to babysit it.
+        </p>
+        <div class="feature-list">
+          <div class="feature-list-item">
+            <strong>Clear scope before UI polish.</strong>
+            <p>I map the states, decisions, and handoffs first so the interface is answering a real operational problem.</p>
+          </div>
+          <div class="feature-list-item">
+            <strong>Working surfaces early.</strong>
+            <p>The useful parts of the product show up quickly, which makes feedback more concrete and reduces late-stage surprises.</p>
+          </div>
+          <div class="feature-list-item">
+            <strong>Readable behaviour once live.</strong>
+            <p>The end result should stay understandable when content changes, usage grows, or another team has to take ownership.</p>
+          </div>
         </div>
-        <div class="manifest-row">
-          <strong>Operator tooling</strong>
-          <p>Internal software that helps humans see the right state quickly instead of guessing through noise.</p>
-        </div>
+        <a href="/how-i-work" class="link-inline">See how the work runs</a>
       </div>
     </div>
   </section>
 
-  <section class="page-section" id="work">
+  <section class="page-section timeline-tree">
+    <div class="container content-split timeline-tree-layout">
+      <div class="timeline-list">
+        <article class="timeline-card" data-reveal>
+          <strong>Websites and product apps</strong>
+          <p>Public-facing work that has to explain the product clearly and still hold up once the engineering reality gets more complex.</p>
+        </article>
+        <article class="timeline-card" data-reveal style="--reveal-delay: 40ms;">
+          <strong>Internal tools and system work</strong>
+          <p>Operational software for teams that need clearer state, fewer manual gaps, and less guesswork around what the system is doing.</p>
+        </article>
+        <article class="timeline-card" data-reveal style="--reveal-delay: 80ms;">
+          <strong>Trading systems and fintech</strong>
+          <p>Builds where reconciliation, execution state, contributions, payouts, or trust-sensitive flows need more care than a standard app cycle.</p>
+        </article>
+        <article class="timeline-card" data-reveal style="--reveal-delay: 120ms;">
+          <strong>Product reliability and ownership</strong>
+          <p>Hardening the logic, interfaces, and handoff paths so the product stays legible and dependable after launch.</p>
+        </article>
+      </div>
+
+      <div class="visual-panel" data-reveal style="--reveal-delay: 80ms;">
+        <img
+          src="/images/redesign/teacher-tracking-tool-tablet.png"
+          alt="Operational dashboard for learner tracking shown on a tablet."
+          class="visual-panel-image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section selected-work" id="work">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--center" data-reveal>
         <div class="page-intro">Selected work</div>
-        <h2 class="section-title">Two systems that show how I think.</h2>
+        <h2 class="section-title">Two systems that <span class="accent">show how I think.</span></h2>
         <p class="section-copy">
-          Both projects deal with trust. The first depends on technical correctness across distributed parts. The second depends on financial clarity for the people using it.
+          Both projects deal with trust. One has to keep several moving parts in agreement. The other has to make financial state easy to understand for the people relying on it.
         </p>
       </div>
 
       <div class="feature-stack">
-        <article class="feature-panel">
+        <article class="feature-panel" data-reveal>
           <div class="feature-panel-header">
             <div class="stack-lg">
               <div class="eyeline">Trading infrastructure</div>
               <h3 class="feature-title">SMC SuperFIB</h3>
               <p class="panel-copy">
-                A distributed system that keeps a Pine Script indicator, a PHP and WordPress API, MT5 expert advisors, and a React dashboard aligned around one source of truth.
+                A cross-runtime trading system that keeps indicator logic, API state, execution clients, and operator visibility aligned.
               </p>
             </div>
-            <div class="tag-row" role="group" aria-label="SuperFIB stack">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">MT5</span>
-              <span class="tag">WordPress API</span>
-            </div>
           </div>
-          <ul class="bullet-list">
-            <li>Reduced drift between trading views by designing backend authority into the system from the start.</li>
-            <li>Handled time normalization, staleness gates, and cross-platform parity so decisions stayed auditable.</li>
-            <li>Built operator visibility into the dashboard so state could be understood without reading raw logs.</li>
-          </ul>
+          <p class="project-challenge">The hard part was keeping multiple runtimes in agreement without the operator needing to read raw logs to understand what was happening.</p>
           <a href="/projects/superfib" class="link-inline">Read the SuperFIB case study</a>
         </article>
 
-        <article class="feature-panel">
+        <article class="feature-panel" data-reveal style="--reveal-delay: 70ms;">
           <div class="feature-panel-header">
             <div class="stack-lg">
               <div class="eyeline">Community finance</div>
               <h3 class="feature-title">Stokvel Society</h3>
               <p class="panel-copy">
-                A fintech platform for member contributions, trust-layer ledger handling, and predictable payout flows where clarity matters as much as the interface.
+                A fintech product for contributions, ledger visibility, and payout flows that members can actually follow.
               </p>
             </div>
-            <div class="tag-row" role="group" aria-label="Stokvel stack">
-              <span class="tag">Astro</span>
-              <span class="tag">Fintech UX</span>
-              <span class="tag">Ledger logic</span>
-              <span class="tag">Reporting</span>
-            </div>
           </div>
-          <ul class="bullet-list">
-            <li>Kept the core flow readable for members while protecting the underlying accounting logic.</li>
-            <li>Designed the platform around contribution visibility, trust, and predictable payout handling.</li>
-            <li>Turned a community finance workflow into software that can be monitored and explained clearly.</li>
-          </ul>
+          <p class="project-challenge">The hard part was turning a trust-heavy community finance workflow into software that feels calm, clear, and dependable.</p>
           <a href="/projects/stokvel" class="link-inline">Read the Stokvel Society case study</a>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="container">
-      <div class="section-head">
-        <div class="page-intro">Architecture stance</div>
-        <h2 class="section-title">I design for failure paths before I design for screenshots.</h2>
+  <section class="page-section next-step" id="contact">
+    <div class="container next-step-shell">
+      <div class="section-panel next-step-copy" data-reveal>
+        <div class="page-intro">Next step</div>
+        <h2 class="section-title">See the work, then decide if the <span class="accent">fit is right.</span></h2>
         <p class="section-copy">
-          The visuals matter, but the real work is elsewhere. I want the system to answer the hard questions cleanly when the data is late, a dependency fails, or a human needs to understand what happened.
+          If the system has to stay understandable and dependable once it is live, the case studies will tell you quickly whether the fit is there.
         </p>
       </div>
 
-      <div class="principle-grid">
-        <article class="principle">
-          <strong>One source of truth</strong>
-          <p>When several tools touch the same state, I establish authority early so the system can reconcile instead of arguing with itself.</p>
-        </article>
-        <article class="principle">
-          <strong>Operator readability</strong>
-          <p>I expose the information that matters to the person running the system, not just the person who built it.</p>
-        </article>
-        <article class="principle">
-          <strong>Recoverable behavior</strong>
-          <p>Failures should produce understandable states and reasonable next actions, not mystery or panic.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="container">
-      <div class="section-head">
-        <div class="page-intro">How the work runs</div>
-        <h2 class="section-title">A small process with very little theater.</h2>
-        <p class="section-copy">
-          I keep the path visible. You know what is being built, what it costs, and where the risk lives before the project starts drifting.
-        </p>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item">
-          <em>Discovery</em>
-          <strong>I clarify the problem first.</strong>
-          <p>I ask what has to be correct, what can fail safely, and what constraints are non-negotiable.</p>
-        </article>
-        <article class="timeline-item">
-          <em>System map</em>
-          <strong>I define the moving parts.</strong>
-          <p>You get a plan, a boundary for the work, and a view of the technical choices before the build begins.</p>
-        </article>
-        <article class="timeline-item">
-          <em>Build cadence</em>
-          <strong>I ship in readable increments.</strong>
-          <p>Progress stays visible and the architecture stays coherent instead of being hidden in a last-minute dump.</p>
-        </article>
-        <article class="timeline-item">
-          <em>Hardening</em>
-          <strong>I finish with checks that matter.</strong>
-          <p>The end of the build is about stability, clarity, and operational confidence, not rushed cosmetics.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section" id="contact">
-    <div class="container contact-layout">
-      <div class="section-head">
-        <div class="page-intro">Work with me</div>
-        <h2 class="section-title">If the system has to stay trustworthy, I am interested.</h2>
-        <p class="section-copy">
-          Tell me what you are building, what state needs to stay aligned, and where the risk sits. I will tell you quickly whether I am the right fit.
-        </p>
-      </div>
-
-      <div class="contact-stack">
-        <a href="mailto:hello@ss-developers.co.za" class="contact-card">
-          <small>Email</small>
-          <strong>hello@ss-developers.co.za</strong>
-          <p>I handle project discussions directly.</p>
-        </a>
-        <div class="contact-card">
-          <small>Location</small>
-          <strong>Cape Town, South Africa</strong>
-          <p>Remote-first, with a preference for focused builds over broad retainer work.</p>
-        </div>
+      <div class="next-step-actions" data-reveal style="--reveal-delay: 60ms;">
+        <a href="/projects" class="button-primary">See my work</a>
+        <a href="/contact" class="button-secondary">Start Your Project</a>
       </div>
     </div>
   </section>

@@ -1,106 +1,83 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Projects" description="Case studies for SuperFIB and Stokvel Society.">
+<BaseLayout title="Projects | SS Developers Case Studies" description="Two software case studies showing how I handle architecture, trust, operator clarity, and dependable system behaviour.">
   <section class="page-section">
-    <div class="container page-hero-layout">
+    <div class="container">
       <div class="section-head">
         <div class="page-intro">Case studies</div>
         <h1 class="page-title">Projects that prove how I engineer.</h1>
         <p class="page-copy">
-          These are not gallery pieces. They are systems where architecture, data flow, and trust matter more than cosmetic novelty.
+          These are not gallery pieces. They are projects where architecture, data flow, and trust matter more than cosmetic novelty. I show the topology and the tradeoffs without exposing sensitive business logic.
         </p>
-      </div>
-
-      <div class="manifest">
-        <div class="manifest-row">
-          <strong>What I highlight</strong>
-          <p>I focus on constraints, architecture decisions, and how the system behaves under pressure, not just the surface result.</p>
-        </div>
-        <div class="manifest-row">
-          <strong>What I keep private</strong>
-          <p>I show topology and engineering judgment without exposing formulas, thresholds, or sensitive business logic.</p>
-        </div>
       </div>
     </div>
   </section>
 
   <section class="page-section">
     <div class="container project-list">
-      <article class="project-entry">
+      <article class="project-entry" id="superfib">
         <div class="project-entry-header">
           <div class="stack-lg">
             <div class="eyeline">Trading infrastructure</div>
             <h2 class="project-name">SMC SuperFIB</h2>
             <p class="panel-copy">
-              A cross-runtime execution and monitoring system that synchronises indicator logic, API state, trading clients, and dashboard visibility around one source of truth.
+              A cross-runtime execution and monitoring system that keeps indicator logic, API state, trading clients, and dashboard visibility aligned.
             </p>
-          </div>
-          <div class="tag-row">
-            <span class="tag">Pine Script</span>
-            <span class="tag">MT5</span>
-            <span class="tag">React</span>
-            <span class="tag">WordPress API</span>
+            <p class="project-challenge">The hard part was keeping multiple runtimes in agreement without the operator needing to read raw logs to understand what was happening.</p>
+            <a href="/projects/superfib" class="link-inline">Read the full SuperFIB case study</a>
           </div>
         </div>
 
-        <div class="detail-layout">
+        <div class="detail-layout project-architecture">
           <div class="diagram-panel">
             <div class="diagram-frame">
-              <img src="/images/diagram-system/superfib.svg" alt="SuperFIB system diagram showing the indicator, source-of-truth API, MT5 expert advisors, and dashboard." />
+              <img src="/images/diagram-system/superfib-diagram.png" alt="SuperFIB systems dashboard showing Pine Script status, the WordPress API source of truth, MT5 execution status, and operator visibility." />
             </div>
             <p class="diagram-caption">The architecture keeps the API authoritative while the execution and dashboard layers stay readable for operators.</p>
           </div>
 
-          <div class="info-stack">
-            <div class="panel">
-              <div class="panel-title">What made it hard</div>
-              <ul class="bullet-list">
-                <li>Parity across different runtimes and trading surfaces.</li>
-                <li>State drift caused by timing differences and stale inputs.</li>
-                <li>Operator trust when the UI and the execution layer disagree.</li>
-              </ul>
-            </div>
-            <a href="/projects/superfib" class="link-inline">Read the full SuperFIB case study</a>
+          <div class="stack-lg">
+            <div class="panel-title">Architecture</div>
+            <p class="section-copy">
+              The API is the authority. The indicator, execution layer, and dashboard all reconcile against it so parity can be checked and stale state can be caught early.
+            </p>
+            <p class="section-copy">
+              The value here is not the number of moving parts. It is that each part has a clear role and the operator can see what the system believes without guessing.
+            </p>
           </div>
         </div>
       </article>
 
-      <article class="project-entry">
+      <article class="project-entry" id="stokvel">
         <div class="project-entry-header">
           <div class="stack-lg">
             <div class="eyeline">Community finance</div>
             <h2 class="project-name">Stokvel Society</h2>
             <p class="panel-copy">
-              A fintech platform for contribution tracking, trust-layer ledger handling, and payout visibility designed around clarity for members and administrators.
+              A fintech platform for contribution tracking, ledger visibility, and payout flows designed around clarity for members and administrators.
             </p>
-          </div>
-          <div class="tag-row">
-            <span class="tag">Astro</span>
-            <span class="tag">Ledger logic</span>
-            <span class="tag">Reporting</span>
-            <span class="tag">Product UX</span>
+            <p class="project-challenge">The hard part was turning a trust-heavy community finance workflow into software that feels calm, clear, and dependable.</p>
+            <a href="/projects/stokvel" class="link-inline">Read the full Stokvel Society case study</a>
           </div>
         </div>
 
-        <div class="detail-layout">
+        <div class="detail-layout project-architecture">
           <div class="diagram-panel">
             <div class="diagram-frame">
-              <img src="/images/diagram-system/stokvel-society.svg" alt="Stokvel Society diagram showing contribution flow into a ledger and onward to payouts." />
+              <img src="/images/diagram-system/stokvel-society-dashboard.png" alt="Stokvel Society wallet dashboard showing member contributions, ledger trust checks, and payout status." />
             </div>
             <p class="diagram-caption">The product focuses on keeping money movement understandable, auditable, and easy to verify.</p>
           </div>
 
-          <div class="info-stack">
-            <div class="panel">
-              <div class="panel-title">What made it hard</div>
-              <ul class="bullet-list">
-                <li>Translating trust-heavy community workflows into dependable software behavior.</li>
-                <li>Keeping contribution and payout state readable for non-technical users.</li>
-                <li>Balancing straightforward product language with serious financial responsibility.</li>
-              </ul>
-            </div>
-            <a href="/projects/stokvel" class="link-inline">Read the full Stokvel Society case study</a>
+          <div class="stack-lg">
+            <div class="panel-title">Architecture</div>
+            <p class="section-copy">
+              This flow is intentionally simpler. Contributions move into a ledger layer that acts as the financial core, and the payout path stays understandable to the people relying on it.
+            </p>
+            <p class="section-copy">
+              The architecture matters because clarity is part of the product. People need to understand where the money is, what changed, and what happens next.
+            </p>
           </div>
         </div>
       </article>

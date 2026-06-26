@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">SS Developers mark</title>
+  <desc id="desc">A clean interlocking SS monogram with circuit nodes.</desc>
+  <g fill="none" stroke-linecap="butt" stroke-linejoin="round">
+    <path
+      d="M70 24H42L26 40V63L42 79H67V96L53 110H24V136H70L86 120V97L70 81H45V64L59 50H88V24H70Z"
+      stroke="#69F0B9"
+      stroke-width="16"
+    />
+    <path
+      d="M90 24H118L134 40V63L118 79H93V96L107 110H136V136H90L74 120V97L90 81H115V64L101 50H72V24H90Z"
+      stroke="#69F0B9"
+      stroke-width="16"
+    />
+    <path
+      d="M70 24H42L26 40V63L42 79H67V96L53 110H24V136H70L86 120V97L70 81H45V64L59 50H88V24H70Z"
+      stroke="#071018"
+      stroke-width="5"
+    />
+    <path
+      d="M90 24H118L134 40V63L118 79H93V96L107 110H136V136H90L74 120V97L90 81H115V64L101 50H72V24H90Z"
+      stroke="#071018"
+      stroke-width="5"
+    />
+  </g>
+  <circle cx="54" cy="110" r="8.5" fill="#69F0B9" />
+  <circle cx="96" cy="50" r="8.5" fill="#69F0B9" />
+  <circle cx="54" cy="110" r="3.2" fill="#071018" />
+  <circle cx="96" cy="50" r="3.2" fill="#071018" />
+</svg>
